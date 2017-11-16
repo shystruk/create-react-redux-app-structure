@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  outline-style: none;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.app .app-navigation {
+  margin: 10px 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+
+// Margin
+.mt15 {
+  margin-top: 15px;
+}
+.mb15 {
+  margin-bottom: 15px;
+}
+
+
+// Display
+.displayBlock {
+  display: block;
+}
+.displayNone {
+  display: none;
+}
+
+
+// toTop button
+#toTop {
+  display: none;
+  background: url(../images/backtotop.svg) 49% 47% no-repeat $blackColor;
+  background-size: 40% 40%;
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 60px;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}

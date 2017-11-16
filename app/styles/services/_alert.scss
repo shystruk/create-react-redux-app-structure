@@ -1,0 +1,64 @@
+.app-alert-service {
+  position: fixed;
+  width: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  bottom: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 80px 5px 0;
+
+  .app-alert-modal {
+    margin: 0 auto;
+    max-width: 400px;
+    background-color: $alertBackgroundColor;
+    padding: 10px;
+    box-shadow: 0 0 10px -1px rgba(0,0,0,0.75);
+  }
+
+  .app-alert-body {
+    display: flex;
+    justify-content: space-between;
+
+    .app-alert-message {
+      font-size: 16px;
+      color: $whiteColor;
+      line-height: 1.6;
+      margin-top: 15px;
+    }
+
+    .app-alert-close {
+      color: $whiteColor;
+      text-align: right;
+      margin-left: 10px;
+      margin-top: -5px;
+      display: inline-block;
+      height: min-content;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .app-alert-button {
+    text-align: right;
+
+    button {
+      background: $whiteColor;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      padding: 4px 10px;
+      font-weight: bold;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.app-open-weather-search {
+  margin-top: 30px;
+
+  input {
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
+
+  button {
+    padding: 5px 20px;
+    margin-left: 30px;
+    cursor: pointer;
+
+    &:focus {
+      outline: 1px solid $blackColor;
+    }
+  }
+
+  .app-preload {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "staging": {
+    "assetHost": "<!-- https://url -->"
+  },
+  "prod": {
+    "assetHost": "<!-- https://url -->"
+  },
+  "dev": {
+    "assetHost": ".",
+    "serverHost": "http://localhost:8080/"
+  },
+  "PATHS": {
+    "app": "./app",
+    "sass_index": "./app/styles/styles.scss",
+    "sass": ["./app/styles/*.scss", "./app/styles/**/*.scss", "./app/styles/**/**/*.scss"],
+    "build": "./build",
+    "vendor": "./app/vendor",
+    "styles": "./build/styles.css",
+    "external": ["./app/helpers/globalService.js", "./app/helpers/domReady.js"]
+  }
+}

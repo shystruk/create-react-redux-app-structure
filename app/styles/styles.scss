@@ -1,0 +1,19 @@
+@import "normalize";
+@import "animations";
+@import "fonts";
+@import "varibles";
+@import "mixins";
+@import "main";
+
+// PAGES
+@import "pages/home";
+@import "pages/about";
+
+// SMART COMPONENTS
+@import "components/open_weather_search";
+
+// DUMB COMPONENTS
+@import "components/dumb/weather_view";
+
+// SERVICES
+@import "services/alert";

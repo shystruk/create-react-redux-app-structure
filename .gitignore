@@ -1,0 +1,17 @@
+yarn-error.log
+
+node_modules
+npm-debug*
+
+*.js.map
+
+.idea
+
+app/tests/__tests__/coverage/*
+
+.DS_Store
+
+app/config.json
+
+build/*
+index.html
