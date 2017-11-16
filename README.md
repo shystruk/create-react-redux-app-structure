@@ -22,19 +22,19 @@ Inside that file:
 
 
 ## Build scripts ##
-Development - **`npm run dev`** or **`yarn run dev`**
+Development - **`npm/yarn run dev`** or **`yarn run dev`**
 
-Production - **`npm run prod`** or **`npm run prod`**
+Production - **`npm/yarn run prod`** or **`yarn run prod`**
 
-Staging - **`npm run staging`** or **`npm run staging`**
+Staging - **`npm/yarn run staging`** or **`yarn run staging`**
 
 
 ## Tests ##
-Unit - **`npm run test`**
+Unit - **`npm run test`** or **`yarn run test`**
 
-Unit with watch - **`npm run test:watch`**
+Unit with watch - **`npm run test:watch`** or **`yarn run test:watch`**
 
-E2E - **`npm run e2e`**
+E2E - **`npm run e2e`** or **`yarn run e2e`**
 
 Coverage is here - *app/tests/__tests__/coverage/Icon-report/index.html*
 
