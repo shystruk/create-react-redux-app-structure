@@ -1,10 +1,13 @@
 # Create React Redux App Structure #
+
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) [![Build Status](https://travis-ci.org/shystruk/create-react-redux-app-structure.svg?branch=master)](https://travis-ci.org/shystruk/create-react-redux-app-structure)
+
 Create React + Redux app structure with build configurations
 
 ## Prepare config.json for build configurations ##
 For running builds you need to have **config.json** in app/ folder.
 So you can create new one or rename **app/config.json.example**.  
+
 Inside that file:
  - **PATHS** is used in Grunt and Gulp tasks
  - **assetHost** CDN path for each build
@@ -19,19 +22,19 @@ Inside that file:
 
 
 ## Build scripts ##
-Development - **npm run dev** or **yarn run dev**
+Development - **`npm run dev`** or **`yarn run dev`**
 
-Production - **npm run prod** or **npm run prod**
+Production - **`npm run prod`** or **`npm run prod`**
 
-Staging - **npm run staging** or **npm run staging**
+Staging - **`npm run staging`** or **`npm run staging`**
 
 
 ## Tests ##
-Unit - **npm run test**
+Unit - **`npm run test`**
 
-Unit with watch - **npm run test:watch**
+Unit with watch - **`npm run test:watch`**
 
-E2E - **npm run e2e**
+E2E - **`npm run e2e`**
 
 Coverage is here - *app/tests/__tests__/coverage/Icon-report/index.html*
 
