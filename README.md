@@ -22,11 +22,11 @@ Inside that file:
 
 
 ## Build scripts ##
-Development - **`npm/yarn run dev`** or **`yarn run dev`**
+Development - **`npm run dev`** or **`yarn run dev`**
 
-Production - **`npm/yarn run prod`** or **`yarn run prod`**
+Production - **`npm run prod`** or **`yarn run prod`**
 
-Staging - **`npm/yarn run staging`** or **`yarn run staging`**
+Staging - **`npm run staging`** or **`yarn run staging`**
 
 
 ## Tests ##
