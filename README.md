@@ -4,7 +4,23 @@
 
 Create React + Redux app structure with build configurations
 
-## Prepare config.json for build configurations ##
+## What can you find here ##
+- Express, Cors
+- React + Redux
+- React Router
+- SASS
+- Build configuration **Development, Staging, Production** with CDN, [cache-busting](https://www.keycdn.com/support/what-is-cache-busting/) support
+- Unit tests Jest, Enzyme
+- E2E Cypress tests
+
+## Getting Started ##
+### Installation ###
+**`npm install`** or **`yarn install`**
+
+### Run server ###
+`node index.js`
+
+### Prepare config.json for build configurations ###
 For running builds you need to have **config.json** in app/ folder.
 So you can create new one or rename **app/config.json.example**.  
 
@@ -12,14 +28,6 @@ Inside that file:
  - **PATHS** is used in Grunt and Gulp tasks
  - **assetHost** CDN path for each build
  - **serverHost** is used for running e2e Cypress tests
-
-## Getting Started ##
-### Installation ###
-**`npm install`** or **`yarn install`**
-
-#### Run server ####
-`node index.js`
-
 
 ## Build scripts ##
 Development - **`npm run dev`** or **`yarn run dev`**
