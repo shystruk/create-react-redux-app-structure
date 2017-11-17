@@ -2,7 +2,7 @@
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) [![Build Status](https://travis-ci.org/shystruk/create-react-redux-app-structure.svg?branch=master)](https://travis-ci.org/shystruk/create-react-redux-app-structure) [![npm version](https://badge.fury.io/js/create-react-redux-app-structure.svg)](https://badge.fury.io/js/create-react-redux-app-structure)
 
-Create React + Redux app structure with build configurations. 
+Create React + Redux app structure with build configurations.
 
 ## What can you find here ##
 - Express, Cors
@@ -16,6 +16,10 @@ Create React + Redux app structure with build configurations.
 - E2E Cypress tests
 
 ## Getting Started ##
+You can download the repository or install through npm `npm i create-react-redux-app-structure`.
+
+As CLI is not supported yet and you installed the package through npm go to `node_modules/create-react-redux-app-structure` for getting app structure.
+
 ### Installation ###
 **`npm install`** or **`yarn install`**
 
@@ -23,7 +27,7 @@ Create React + Redux app structure with build configurations.
 Have a look at [Build Scripts](#build-scripts) section
 
 ### Run server ###
-`node index.js`
+**`node index.js`**
 
 Then open http://localhost:8080/ to see test weather app :)
 
