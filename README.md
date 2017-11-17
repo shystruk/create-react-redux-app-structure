@@ -1,6 +1,6 @@
 # Create React Redux App Structure #
 
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) [![Build Status](https://travis-ci.org/shystruk/create-react-redux-app-structure.svg?branch=master)](https://travis-ci.org/shystruk/create-react-redux-app-structure)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) [![Build Status](https://travis-ci.org/shystruk/create-react-redux-app-structure.svg?branch=master)](https://travis-ci.org/shystruk/create-react-redux-app-structure) [![npm version](https://badge.fury.io/js/create-react-redux-app-structure.svg)](https://badge.fury.io/js/create-react-redux-app-structure)
 
 Create React + Redux app structure with build configurations
 
