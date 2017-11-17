@@ -2,7 +2,7 @@
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) [![Build Status](https://travis-ci.org/shystruk/create-react-redux-app-structure.svg?branch=master)](https://travis-ci.org/shystruk/create-react-redux-app-structure) [![npm version](https://badge.fury.io/js/create-react-redux-app-structure.svg)](https://badge.fury.io/js/create-react-redux-app-structure)
 
-Create React + Redux app structure with build configurations
+Create React + Redux app structure with build configurations. 
 
 ## What can you find here ##
 - Express, Cors
@@ -19,8 +19,13 @@ Create React + Redux app structure with build configurations
 ### Installation ###
 **`npm install`** or **`yarn install`**
 
+### Run build script ###
+Have a look at [Build Scripts](#build-scripts) section
+
 ### Run server ###
 `node index.js`
+
+Then open http://localhost:8080/ to see test weather app :)
 
 ### Prepare config.json for build configurations ###
 For running builds you need to have **config.json** in app/ folder.
@@ -59,3 +64,7 @@ Automation tests run only in **staging**, so for production build we remove them
 window.store = store;
 /* end-staging-code */
 ```
+
+## Contributing ##
+I would love to have your help. If you have an idea how to improve, change app structure please submit a pull request or create an issue.
+Thanks!
