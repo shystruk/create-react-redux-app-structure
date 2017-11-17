@@ -4,7 +4,7 @@
 
 Create React + Redux app structure with build configurations.
 
-## What can you find here ##
+## What can I find here? ##
 - Express, Cors
 - React + Redux, ES6, async/await
 - React Router
