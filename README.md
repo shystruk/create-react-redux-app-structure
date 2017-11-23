@@ -4,6 +4,8 @@
 
 Create React + Redux app structure with build configurations.
 
+https://medium.com/@shystruk/how-create-react-redux-app-structure-helps-you-to-start-a-project-faster-cf564c64689c
+
 ## What can I find here? ##
 - Express, Cors
 - React + Redux, ES6, async/await
