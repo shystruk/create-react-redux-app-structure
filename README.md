@@ -18,7 +18,7 @@ Create React + Redux app structure with build configurations.
 ## Getting Started ##
 You can download the repository or install through npm `npm i create-react-redux-app-structure`.
 
-As CLI is not supported yet and you installed the package through npm go to `node_modules/create-react-redux-app-structure` for getting app structure.
+As CLI is not supported yet and you have installed the package through npm, go to `node_modules/create-react-redux-app-structure` to get app structure.
 
 ### Installation ###
 **`npm install`** or **`yarn install`**
@@ -70,5 +70,5 @@ window.store = store;
 ```
 
 ## Contributing ##
-I would love to have your help. If you have an idea how to improve, change app structure please submit a pull request or create an issue.
+I would love to have your help. If you have an idea how to improve, change the app structure please submit a pull request or create an issue.
 Thanks!
