@@ -7,10 +7,12 @@ npm-debug*
 
 .idea
 
+#app/config.json
 app/tests/__tests__/coverage/*
 /cypress/
 
 .DS_Store
 
 build/*
-index.html
+
+/index.html
