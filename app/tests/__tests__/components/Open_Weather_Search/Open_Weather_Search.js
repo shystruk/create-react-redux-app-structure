@@ -2,15 +2,13 @@
 
 jest.mock('./../../../../resources/Open_Weather.resource', () => ({
     getWeatherData: jest.fn(() => {
-        return new Promise(resolve => {
-            resolve({
-                name: 'London',
-                sys: { country: 'UK' },
-                weather: [{ description: 'cloud' }],
-                main: { temp: '3' },
-                wind: { speed: '20' },
-                clouds: { all: 'cloud all' }
-            });
+        return Promise.resolve({
+            name: 'London',
+            sys: {country: 'UK'},
+            weather: [{description: 'cloud'}],
+            main: {temp: '3'},
+            wind: {speed: '20'},
+            clouds: {all: 'cloud all'}
         });
     })
 }));
