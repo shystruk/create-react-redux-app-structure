@@ -9,5 +9,5 @@ install:
 script:
   - npm run test
 
-after-success:
+after_success:
   - npm run report-coverage
