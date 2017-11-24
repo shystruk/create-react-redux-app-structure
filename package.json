@@ -20,7 +20,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
     "e2e": "cypress open",
-    "report-coverage": "cat ./app/tests/__tests__/coverage/Icov.info | codecov"
+    "report-coverage": "cat ./app/tests/__tests__/coverage/lcov.info | codecov"
   },
   "config": {
     "ghooks": {

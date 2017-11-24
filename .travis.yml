@@ -8,6 +8,7 @@ install:
 
 script:
   - npm run test
+  - npm run e2e
 
 after_success:
   - npm run report-coverage
