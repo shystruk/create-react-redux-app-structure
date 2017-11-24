@@ -8,6 +8,7 @@ npm-debug*
 .idea
 
 app/tests/__tests__/coverage/*
+/cypress/
 
 .DS_Store
 
