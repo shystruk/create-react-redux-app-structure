@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "assetHost": "."
+  },
+  "prod": {
+    "assetHost": "."
+  },
+  "dev": {
+    "assetHost": "."
+  },
+  "PATHS": {
+    "app": "./app",
+    "sass_index": "./app/styles/styles.scss",
+    "sass": ["./app/styles/*.scss", "./app/styles/**/*.scss", "./app/styles/**/**/*.scss"],
+    "build": "./build",
+    "vendor": "./app/vendor",
+    "styles": "./build/styles.css",
+    "external": ["./app/helpers/appGlobal.js", "./app/helpers/domReady.js"]
+  }
+}

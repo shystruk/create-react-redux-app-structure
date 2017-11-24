@@ -12,7 +12,5 @@ app/tests/__tests__/coverage/*
 
 .DS_Store
 
-app/config.json
-
 build/*
 index.html
