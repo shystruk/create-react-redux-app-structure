@@ -21,7 +21,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
     "report-coverage": "cat ./app/tests/__tests__/coverage/lcov.info | codecov",
-    "e2e": "run-p --race server cypress:run",
+    "e2e": "run-p --race dev server cypress:run",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --spec ./app/tests/e2e/cypress/integration/create_react_redux_app_structure_spec.js"
   },
