@@ -16,6 +16,9 @@ https://medium.com/@shystruk/how-create-react-redux-app-structure-helps-you-to-s
 - Build script to bundle JS, CSS, with sourcemaps
 - Unit tests Jest, Enzyme
 - E2E Cypress tests
+- Ghooks (pre-commit)
+- Code Coverage (https://codecov.io)
+- Travis CI runs Unit and E2E tests and report to codecov
 
 ## Getting Started ##
 You can download the repository or install through npm `npm i create-react-redux-app-structure`.
