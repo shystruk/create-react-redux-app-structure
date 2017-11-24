@@ -8,3 +8,6 @@ install:
 
 script:
   - npm run test
+
+after-success:
+  - npm run report-coverage
