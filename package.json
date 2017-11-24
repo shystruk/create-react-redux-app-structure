@@ -21,6 +21,11 @@
     "test:watch": "jest --coverage --watch",
     "e2e": "cypress open"
   },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    }
+  },
   "jest": {
     "verbose": true,
     "globals": {},
@@ -70,6 +75,7 @@
     "cypress": "^1.0.1",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
+    "ghooks": "^2.0.0",
     "grunt": "^1.0.1",
     "grunt-cache-busting": "^0.0.11",
     "grunt-cli": "^1.2.0",
