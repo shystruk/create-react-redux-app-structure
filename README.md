@@ -12,7 +12,7 @@ https://medium.com/@shystruk/how-create-react-redux-app-structure-helps-you-to-s
 - React Router
 - SASS
 - PostCSS (autoprefixer), so you do not need -webkit, -moz or other prefixes
-- Build script configuration **Development, Staging, Production** with CDN, [cache-busting](https://www.keycdn.com/support/what-is-cache-busting/) support,
+- Build script configuration **Development, Staging, Production** with CDN, [cache-busting](https://www.keycdn.com/support/what-is-cache-busting/) support
 - Build script to bundle JS, CSS, with sourcemaps
 - Unit tests Jest, Enzyme
 - E2E Cypress tests
@@ -64,7 +64,7 @@ Coverage is here - *app/tests/__tests__/coverage/Icon-report/index.html*
 
 
 ## Automation tests ##
-Let's images that for automation tests we need to get access to the Redux store.
+Let's imagine that for automation tests we need to get access to the Redux store.
 We can do that by adding to the `window` object property with reference to the store. For e.g. in `app.jsx` file.
 Automation tests run only in **staging**, so for production build we remove them out by Grunt task `strip_code` 
 
