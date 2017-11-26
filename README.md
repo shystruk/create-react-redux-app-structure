@@ -25,17 +25,6 @@ You can download the repository or install through npm `npm i create-react-redux
 
 As CLI is not supported yet and you have installed the package through npm, go to `node_modules/create-react-redux-app-structure` to get app structure.
 
-### Installation ###
-**`npm install`** or **`yarn install`**
-
-### Run build script ###
-Have a look at [Build Scripts](#build-scripts) section
-
-### Run server ###
-**`node index.js`**
-
-Then open http://localhost:8080/ to see test weather app :)
-
 ### Prepare config.json for build configurations ###
 For running builds you need to have **config.json** in app/ folder.
 So you can create new one or rename **app/config.json.example**.  
@@ -44,6 +33,19 @@ Inside that file:
  - **PATHS** is used in Grunt and Gulp tasks
  - **assetHost** CDN path for each build
  - **serverHost** is used for running e2e Cypress tests
+
+### Installation ###
+**`npm install`** or **`yarn install`**
+
+You can run **npm run fast-start** script, it will install all npm packages, run dev build, server and open http://localhost:8080/
+
+### Run build script ###
+Have a look at [Build Scripts](#build-scripts) section
+
+### Run server ###
+**`node index.js`** or **npm run server**
+
+Then open http://localhost:8080/ to see test weather app :)
 
 ## Build scripts ##
 Development - **`npm run dev`** or **`yarn run dev`**
