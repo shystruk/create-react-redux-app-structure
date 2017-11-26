@@ -14,6 +14,7 @@
   "author": "shystruk",
   "license": "MIT",
   "scripts": {
+    "fast-start": "npm install && run-p server dev open-localhost",
     "server": "nodemon --delay 2 index.js",
     "dev": "concurrently \"webpack --watch\" \"gulp\"",
     "prod": "gulp clean-build && grunt remove-code && webpack && gulp prod --production && grunt",
@@ -23,7 +24,8 @@
     "report-coverage": "cat ./app/tests/__tests__/coverage/lcov.info | codecov",
     "e2e": "run-p --race dev server cypress:run",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --spec ./app/tests/e2e/cypress/integration/create_react_redux_app_structure_spec.js"
+    "cypress:run": "cypress run --spec ./app/tests/e2e/cypress/integration/create_react_redux_app_structure_spec.js",
+    "open-localhost": "opn http://localhost:8080/"
   },
   "config": {
     "ghooks": {

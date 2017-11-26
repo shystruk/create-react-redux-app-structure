@@ -1,9 +1,12 @@
 'use strict';
 
-import { PUSH_WEATHER } from './../actions/weather';
+import { PUSH_WEATHER, REQUEST_WEATHER, RECEIVE_WEATHER } from './../actions/weather';
 
 const initialState = {
-    weather: {}
+    weather: {
+        data: {},
+        loaded: false
+    }
 };
 
 /**
@@ -16,7 +19,19 @@ export default function weatherReducer(state = initialState, action) {
         case PUSH_WEATHER:
             return {
                 ...state,
-                ...{...action.weather}
+                data: {
+                    ...{...action.weather}
+                }
+            };
+        case REQUEST_WEATHER:
+            return {
+                ...state,
+                loaded: false
+            };
+        case RECEIVE_WEATHER:
+            return {
+                ...state,
+                loaded: true
             };
         default:
             return state;

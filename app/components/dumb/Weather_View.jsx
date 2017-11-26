@@ -31,8 +31,8 @@ export default class Weather_View extends Component {
         let weather = this.props.weather;
         let weatherList = this.props.weatherList;
 
-        if (!_isEmpty(weather)) {
-            oneCity = <li>{Weather_View.weatherTemplate(weather)}</li>;
+        if (!_isEmpty(weather.data)) {
+            oneCity = <li>{Weather_View.weatherTemplate(weather.data)}</li>;
         }
 
         return <div className="app-weather-view">

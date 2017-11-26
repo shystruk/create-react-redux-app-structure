@@ -20,7 +20,7 @@ export default class About extends Component {
 
             <h1>About</h1>
 
-            <Open_Weather_Search />
+            <Open_Weather_Search weather={weatherStore} />
 
             <Weather_View weather={weatherStore} weatherList={weatherListStore.weatherList} />
 

@@ -2,13 +2,16 @@
 
 import React, { Component } from 'react';
 import store from './../../store';
-import { pushWeather } from './../../actions/weather';
+import { pushWeather, fetchWeather } from './../../actions/weather';
 import { pushWeatherList } from './../../actions/weather_list';
 import { showAlert } from './../../actions/alert';
 import { getWeatherData } from './../../resources/Open_Weather.resource';
+import { getGeoLocation } from './../../resources/Geolocation.resource';
 import { Open_Weather_Interface } from './../../helpers/interfaces';
+import { getLocation, getCityNameFromGeocode } from './../../helpers/geolocation';
 import { parseWeatherResponseForUI } from './Open_Weather_Search.utils';
 import { KEY_CODES } from './../../constants/keyCodes.constant';
+import { ERROR_MESSAGES } from './../../constants/request.constant';
 
 export default class Open_Weather extends Component {
     constructor() {
@@ -19,6 +22,26 @@ export default class Open_Weather extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleKeyUp = this.handleKeyUp.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
+    }
+
+    componentDidMount() {
+        if (!this.props.weather.loaded) {
+            this.setState(() => ({preload: true}));
+
+            getLocation()
+                .then(position => {
+                    return getGeoLocation(`${position.latitude},${position.longitude}`);
+                })
+                .then(location => {
+                    return store.dispatch(fetchWeather(getCityNameFromGeocode(location)));
+                })
+                .catch(error => {
+                    store.dispatch(showAlert((error && error.message) || ERROR_MESSAGES.GEO_LOCATION_UNAVAILABLE));
+                })
+                .finally(() => {
+                    this.setState(() => ({preload: false}));
+                });
+        }
     }
 
     /**

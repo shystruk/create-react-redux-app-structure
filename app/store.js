@@ -8,7 +8,10 @@ import rootReducer from './reducers';
 
 let middleware;
 let initialState = {
-    weather: {},
+    weather: {
+        data: {},
+        loaded: false
+    },
     weatherCities: {
         weatherList: []
     }

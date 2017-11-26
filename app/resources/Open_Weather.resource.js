@@ -5,7 +5,7 @@ import ajax from './../resources/ajax';
 
 /**
  * @param {String} cityName
- * @param {Boolean} isCityList
+ * @param {Boolean=} isCityList
  * @return {Promise}
  */
 export const getWeatherData = function (cityName, isCityList) {
