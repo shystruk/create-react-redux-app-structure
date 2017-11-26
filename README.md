@@ -37,7 +37,7 @@ Inside that file:
 ### Installation ###
 **`npm install`** or **`yarn install`**
 
-You can run **npm run fast-start** script, it will install all npm packages, run dev build, server and open http://localhost:8080/
+>You can run **npm run fast-start** script, it will install all npm packages, run dev build, server and open http://localhost:8080/
 
 ### Run build script ###
 Have a look at [Build Scripts](#build-scripts) section
