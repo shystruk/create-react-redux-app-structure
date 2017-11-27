@@ -3,7 +3,6 @@
 import _find from 'lodash/find';
 import _includes from 'lodash/includes';
 
-
 /**
  * @return {Promise}
  */
@@ -43,7 +42,12 @@ export const getCityNameFromGeocode = (location) => {
     });
 
     if (address) {
-        return address.long_name;
+        switch (address.long_name) {
+            case 'Kyiv': 
+                return 'Kiev';
+            default:
+                return address.long_name;
+        }
     }
 
     return 'Kiev';
