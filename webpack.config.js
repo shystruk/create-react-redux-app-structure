@@ -48,7 +48,7 @@ const common = {
     },
 };
 
-if (TARGET === 'dev' || !TARGET) {
+if (TARGET === 'dev' || TARGET === 'fast-start' || !TARGET) {
     module.exports = common;
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "create-react-redux-app-structure",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "main": "index.js",
   "repository": "https://github.com/shystruk/create-react-redux-app-structure.git",
   "description": "create react redux app structure with build configurations",
@@ -14,7 +14,7 @@
   "author": "shystruk",
   "license": "MIT",
   "scripts": {
-    "fast-start": "yarn install && run-p server dev open-localhost",
+    "fast-start": "yarn install && webpack && gulp prod && run-p server open-localhost",
     "server": "nodemon --delay 2 index.js",
     "dev": "concurrently \"webpack --watch\" \"gulp\"",
     "prod": "gulp clean-build && grunt remove-code && webpack && gulp prod --production && grunt",
