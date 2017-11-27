@@ -27,13 +27,18 @@ const common = {
             {
                 test: /\.js$/,
                 loaders: 'babel-loader',
-                exclude: /node_modules/,
+                // TODO: for own project replace to /node_modules/
+                // Exclude app.jsx for npm as we use a module in node_modules that is JSX.
+                // babel-loader is excluding it so it doesn't read it,
+                // we make an exception for that package in that regex (whitelist or blacklist)
+                // For more details please see issues - https://github.com/babel/babel-loader/issues/530
+                exclude: /node_modules\/(?!(app)\/).*/,
                 include: PATHS.app
             },
             {
                 test: /\.jsx$/,
                 loaders: 'babel-loader',
-                exclude: /node_modules/,
+                exclude: /node_modules\/(?!(app)\/).*/,
                 include: PATHS.app
             }
         ]
