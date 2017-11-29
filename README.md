@@ -4,8 +4,6 @@
 
 Create React + Redux app structure with build configurations.
 
-https://medium.com/@shystruk/how-create-react-redux-app-structure-helps-you-to-start-a-project-faster-cf564c64689c
-
 ## What can I find here? ##
 - Express, Cors
 - React + Redux, ES6, async/await
@@ -83,6 +81,11 @@ window.store = store;
 Kill all node processes:
 - MacOS `sudo kilall -9 node`
 - Windows (cmd) `taskkill /f /im node.exe`
+
+## Detailed description about features and approaches ##
+- [How create-react-redux-app-structure helps you to start a project faster](https://medium.com/@shystruk/how-create-react-redux-app-structure-helps-you-to-start-a-project-faster-cf564c64689c)
+- [clearIntervals() when user has a nap](https://codeburst.io/clearintervals-when-user-has-a-nap-3bf8010c986b)
+- [Do you still register window event listeners in each component?](https://medium.com/@shystruk/do-you-still-register-window-event-listeners-in-each-component-react-in-example-31a4b1f6f1c8)
 
 ## Contributing ##
 I would love to have your help. If you have an idea how to improve, change the app structure please submit a pull request or create an issue.
