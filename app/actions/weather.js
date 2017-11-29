@@ -17,7 +17,7 @@ export function pushWeather(weather) {
     return {
         type: PUSH_WEATHER,
         weather
-    }
+    };
 }
 
 /**
@@ -26,7 +26,7 @@ export function pushWeather(weather) {
 export function requestWeather() {
     return {
         type: REQUEST_WEATHER
-    }
+    };
 }
 
 /**
@@ -35,7 +35,7 @@ export function requestWeather() {
 export function receiveWeather() {
     return {
         type: RECEIVE_WEATHER
-    }
+    };
 }
 
 /**

@@ -1,0 +1,23 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jquery": true
+  },
+  "globals": {
+    "app": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "error",
+    "curly": "error",
+    "semi": ["error", "always"],
+    "no-empty": ["error", { "allowEmptyCatch": true }]
+  }
+}

@@ -11,7 +11,7 @@ export function pushWeatherList(weather) {
     return {
         type: PUSH_WEATHER_LIST,
         weather
-    }
+    };
 }
 
 /**
@@ -22,7 +22,7 @@ export function removeWeatherFromList(index) {
     return {
         type: REMOVE_WEATHER_FROM_LIST,
         index
-    }
+    };
 }
 
 

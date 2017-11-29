@@ -11,7 +11,7 @@ export default class Resize_SubPub_Action extends Component {
 
         this.resizeSubKey = 0;
 
-        this.updateSizes = this.updateSizes.bind(this)
+        this.updateSizes = this.updateSizes.bind(this);
     }
 
     updateSizes() {

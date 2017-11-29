@@ -16,6 +16,10 @@ module.exports = function (app) {
         res.sendFile(path.resolve(__dirname, './../../index.html'));
     });
 
+    app.get('/visibility', function (req, res) {
+        res.sendFile(path.resolve(__dirname, './../../index.html'));
+    });
+
     app.get('/weather/:queryExpression', function (req, res) {
         fetch(`${ROUTES.WEATHER_BASE_URL}weather?${req.params.queryExpression}`)
             .then(response => response.json())

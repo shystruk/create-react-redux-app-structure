@@ -11,7 +11,7 @@ export function showAlert(message) {
     return {
         type: SHOW_ALERT,
         message
-    }
+    };
 }
 
 /**
@@ -20,5 +20,5 @@ export function showAlert(message) {
 export function hideAlert() {
     return {
         type: HIDE_ALERT
-    }
+    };
 }
