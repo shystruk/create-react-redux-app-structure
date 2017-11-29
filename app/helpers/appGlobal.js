@@ -8,23 +8,35 @@ var app = app || {};
 (function () {
 'use strict';
 
+    var subPub = Object.seal({
+        key: 0,
+        subscribers: {},
+        subscribe: function(subscriber) {
+            this.subscribers[this.key] = subscriber;
+
+            return this.key++;
+        },
+        publish: function(args) {
+            for (var sub in this.subscribers) {
+                try {
+                    this.subscribers[sub](args);
+                } catch(ignore) {}
+            }
+        },
+        unsubscribe: function(key) {
+            delete this.subscribers[key];
+        },
+    });
+
     /**
      * Publish/Subscribe for Window Resize Listener
      */
-    app.resizeEvent = Object.freeze({
-        subscribers: [],
-        subscribe: function(subscriber) {
-            this.subscribers.push(subscriber);
-        },
-        publish: function(args) {
-            this.subscribers.forEach(function (subscriber) {
-                try {
-                    subscriber(args);
-                } catch(ignore) {}
-            })
-        }
-    });
+    app.resizeEvent = Object.create(subPub);
 
+    /**
+     * Publish/Subscribe for VisibilityChange Listener
+     */
+    app.visibilityChangeEvent = Object.create(subPub);
 
     /**
      * A function that performs no operations.
