@@ -17,7 +17,7 @@
 
         // Window Resize Listener
         $(window).resize(function() {
-            window.app.resizeEvent.publish();
+            app.resizeEvent.publish();
         });
 
 

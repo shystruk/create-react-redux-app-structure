@@ -20,6 +20,8 @@ export default class About extends Component {
 
             <h1>About</h1>
 
+            <p><em>You are not able to remove weather from the list on this page :)</em></p>
+
             <Open_Weather_Search weather={weatherStore} />
 
             <Weather_View weather={weatherStore} weatherList={weatherListStore.weatherList} />

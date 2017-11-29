@@ -17,13 +17,14 @@
   "scripts": {
     "fast-start": "yarn install && webpack && gulp prod && run-p server open-localhost",
     "server": "nodemon --delay 2 index.js",
+    "server:e2e": "node index.js",
     "dev": "concurrently \"webpack --watch\" \"gulp\"",
     "prod": "gulp clean-build && grunt remove-code && webpack && gulp prod --production && grunt",
     "staging": "gulp clean-build && webpack && gulp prod --production && grunt",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
     "report-coverage": "cat ./app/tests/__tests__/coverage/lcov.info | codecov",
-    "e2e": "run-p --race dev server cypress:run",
+    "e2e": "run-p --race dev server:e2e cypress:run",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --spec ./app/tests/e2e/cypress/integration/create_react_redux_app_structure_spec.js",
     "open-localhost": "opn http://localhost:8080/"
