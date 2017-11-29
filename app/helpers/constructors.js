@@ -10,7 +10,7 @@ export function Interval(instanceFn, instanceInterval) {
 
     this.start = (fn = instanceFn , interval = instanceInterval) => {
         if (!timer) {
-            timer = setInterval(() => { fn() }, interval);
+            timer = setInterval(() => { fn(); }, interval);
         }
     };
 
