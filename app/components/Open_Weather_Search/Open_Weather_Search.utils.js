@@ -14,5 +14,5 @@ export const parseWeatherResponseForUI = function (weather) {
         temperature: `${weather.main.temp}°С`,
         wind: `wind ${weather.wind.speed} m/s`,
         clouds: `clouds ${weather.clouds.all} %`
-    }
+    };
 };

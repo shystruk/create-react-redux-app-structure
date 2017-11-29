@@ -16,10 +16,12 @@ var app = app || {};
 
             return this.key++;
         },
-        publish: function(args) {
+        publish: function() {
+            var args = Array.prototype.slice.call(arguments);
+
             for (var sub in this.subscribers) {
                 try {
-                    this.subscribers[sub](args);
+                    this.subscribers[sub](args[0], args[1]);
                 } catch(ignore) {}
             }
         },

@@ -30,4 +30,4 @@ export default function (method, url, data, config) {
         .done(response => resolve(response))
         .fail(errResponse => reject(errResponse));
     });
-};
+}
