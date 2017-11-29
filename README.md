@@ -78,6 +78,11 @@ window.store = store;
 /* end-staging-code */
 ```
 
+## Tips ##
+Kill all node processes:
+- MacOS `sudo kilall -9 node`
+- Windows (cmd) `taskkill /f /im node.exe`
+
 ## Contributing ##
 I would love to have your help. If you have an idea how to improve, change the app structure please submit a pull request or create an issue.
 Thanks!
