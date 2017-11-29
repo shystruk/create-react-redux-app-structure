@@ -1,6 +1,6 @@
 # Create React Redux App Structure [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?hashtags=reactjs%20%23redux%20%23javascript&original_referer=https%3A%2F%2Fpublish.twitter.com%2F&ref_src=twsrc%5Etfw&text=Start%20your%20project%20fast%20with%20Create%20React%20Redux%20App%20Structure&tw_p=tweetbutton&url=https%3A%2F%2Fgithub.com%2Fshystruk%2Fcreate-react-redux-app-structure&via=shystrukk) #
 
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) [![Build Status](https://travis-ci.org/shystruk/create-react-redux-app-structure.svg?branch=master)](https://travis-ci.org/shystruk/create-react-redux-app-structure) [![npm version](https://badge.fury.io/js/create-react-redux-app-structure.svg)](https://badge.fury.io/js/create-react-redux-app-structure)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) [![codecov](https://codecov.io/gh/shystruk/create-react-redux-app-structure/branch/master/graph/badge.svg)](https://codecov.io/gh/shystruk/create-react-redux-app-structure) [![Build Status](https://travis-ci.org/shystruk/create-react-redux-app-structure.svg?branch=master)](https://travis-ci.org/shystruk/create-react-redux-app-structure) [![npm version](https://badge.fury.io/js/create-react-redux-app-structure.svg)](https://badge.fury.io/js/create-react-redux-app-structure)
 
 Create React + Redux app structure with build configurations.
 
@@ -77,6 +77,11 @@ Automation tests run only in **staging**, so for production build we remove them
 window.store = store;
 /* end-staging-code */
 ```
+
+## Tips ##
+Kill all node processes:
+- MacOS `sudo kilall -9 node`
+- Windows (cmd) `taskkill /f /im node.exe`
 
 ## Contributing ##
 I would love to have your help. If you have an idea how to improve, change the app structure please submit a pull request or create an issue.
