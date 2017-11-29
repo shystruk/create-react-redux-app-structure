@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import { Show_Page_Visibility_API_Interface } from './../../helpers/interfaces';
-import { Interval } from './../../helpers/constructors';
+import SetInterval from 'set-interval';
 import store from './../../store';
 import { showAlert } from './../../actions/alert';
 
@@ -15,8 +15,6 @@ export default class Show_Page_Visibility_API extends Component {
 
         this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
         this.simulateHTTPRequest = this.simulateHTTPRequest.bind(this);
-
-        this.getAmountOfNewUsers_Interval = new Interval(this.simulateHTTPRequest, 1000);
     }
 
     simulateHTTPRequest() {
@@ -33,22 +31,22 @@ export default class Show_Page_Visibility_API extends Component {
      */
     handleVisibilityChange(event, action) {
         if (action === 'continue') {
-            this.getAmountOfNewUsers_Interval.start(this.simulateHTTPRequest, 1000);
+            SetInterval.start(this.simulateHTTPRequest, 1000);
             store.dispatch(showAlert('Seems like the page was not visible. Do not worry, we keep working :)'));
         } else {
-            this.getAmountOfNewUsers_Interval.clear();
+            SetInterval.clear();
         }
     }
 
     componentDidMount() {
-        this.getAmountOfNewUsers_Interval.start();
+        SetInterval.start(this.simulateHTTPRequest, 1000);
         this.visibilityChangeSubKey = app.visibilityChangeEvent.subscribe(this.handleVisibilityChange);
     }
 
     componentWillUnmount() {
         this.unmount = true;
-        this.getAmountOfNewUsers_Interval.clear();
-        app.resizeEvent.unsubscribe(this.visibilityChangeSubKey);
+        SetInterval.clear();
+        app.visibilityChangeEvent.unsubscribe(this.visibilityChangeSubKey);
     }
 
     render() {

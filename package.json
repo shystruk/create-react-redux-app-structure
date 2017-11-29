@@ -18,7 +18,7 @@
     "fast-start": "yarn install && webpack && gulp prod && run-p server open-localhost",
     "server": "nodemon --delay 2 index.js",
     "server:e2e": "node index.js",
-    "dev": "concurrently \"webpack --watch\" \"gulp\"",
+    "dev": "concurrently \"webpack --progress --colors --watch\" \"gulp\"",
     "prod": "gulp clean-build && grunt remove-code && webpack && gulp prod --production && grunt",
     "staging": "gulp clean-build && webpack && gulp prod --production && grunt",
     "test": "jest --coverage",
@@ -76,7 +76,8 @@
     "redux": "^3.7.1",
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "set-interval": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.3",

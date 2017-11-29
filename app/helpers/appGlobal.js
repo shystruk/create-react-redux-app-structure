@@ -11,21 +11,22 @@ var app = app || {};
     var subPub = Object.seal({
         key: 0,
         subscribers: {},
-        subscribe: function(subscriber) {
+        subscribe: function (subscriber) {
             this.subscribers[this.key] = subscriber;
 
             return this.key++;
         },
-        publish: function() {
+        publish: function () {
             var args = Array.prototype.slice.call(arguments);
 
             for (var sub in this.subscribers) {
                 try {
                     this.subscribers[sub](args[0], args[1]);
-                } catch(ignore) {}
+                } catch (ignore) {
+                }
             }
         },
-        unsubscribe: function(key) {
+        unsubscribe: function (key) {
             delete this.subscribers[key];
         },
     });
@@ -33,12 +34,12 @@ var app = app || {};
     /**
      * Publish/Subscribe for Window Resize Listener
      */
-    app.resizeEvent = Object.create(subPub);
+    app.resizeEvent = Object.assign({}, subPub, { subscribers: {} });
 
     /**
      * Publish/Subscribe for VisibilityChange Listener
      */
-    app.visibilityChangeEvent = Object.create(subPub);
+    app.visibilityChangeEvent = Object.assign({}, subPub, { subscribers: {} });
 
     /**
      * A function that performs no operations.
