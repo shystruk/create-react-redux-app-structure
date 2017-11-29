@@ -16,7 +16,8 @@ https://medium.com/@shystruk/how-create-react-redux-app-structure-helps-you-to-s
 - Build script to bundle JS, CSS, with sourcemaps
 - Unit tests Jest, Enzyme
 - E2E Cypress tests
-- Ghooks (pre-commit)
+- ESLint
+- Ghooks (pre-commit with unit tests and eslint validation)
 - Code Coverage (https://codecov.io)
 - Travis CI runs Unit and E2E tests and report to codecov
 
