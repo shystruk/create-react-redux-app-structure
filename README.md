@@ -20,7 +20,7 @@ Create React + Redux app structure with build configurations.
 - Travis CI runs Unit and E2E tests and report to codecov
 
 ## Getting Started ##
-You can download the repository or install through npm `npm i create-react-redux-app-structure`.
+You can download the repository or install through npm `npm i create-react-redux-app-structure` or `yarn add create-react-redux-app-structure`.
 
 As CLI is not supported yet and you have installed the package through npm, go to `node_modules/create-react-redux-app-structure` to get app structure.
 

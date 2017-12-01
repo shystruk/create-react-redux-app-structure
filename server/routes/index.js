@@ -20,6 +20,15 @@ module.exports = function (app) {
         res.sendFile(path.resolve(__dirname, './../../index.html'));
     });
 
+    app.get('/favicon.ico', function (req, res) {
+        res.writeHead(204, {
+            'Content-Type': 'image/x-icon',
+            'Cache-Control': 'public, max-age: 604800'
+        });
+
+        res.end();
+    });
+
     app.get('/weather/:queryExpression', function (req, res) {
         fetch(`${ROUTES.WEATHER_BASE_URL}weather?${req.params.queryExpression}`)
             .then(response => response.json())
