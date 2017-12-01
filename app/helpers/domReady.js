@@ -3,41 +3,45 @@
  * Listen when the DOM is fully loaded and have window event listeners in one place.
  */
 
-(function ($) {
+import PublishSubscribe from 'publish-subscribe-js';
+import jQuery from 'jquery';
+import { PUB_SUB } from './../constants/events.constant';
+
 'use strict';
 
-    $(document).ready(function() {
-        var toTopBtn = $('#toTop');
+export default function DOMReady() {
+    jQuery(document).ready(function() {
+        const toTopBtn = jQuery('#toTop');
 
 
         // Window Visibilitychange Listener
         initPageVisibilityAPI();
 
         // Window Scroll Listener
-        $(window).scroll(function() {
+        jQuery(window).scroll(function() {
             showHideToTopBtn();
         });
 
         // Window Resize Listener
-        $(window).resize(function() {
-            app.resizeEvent.publish();
+        jQuery(window).resize(function() {
+            PublishSubscribe.publish(PUB_SUB.RESIZE, {width: window.innerWidth, height: window.innerHeight});
         });
 
 
         toTopBtn.click(function () {
-            $('html, body').animate({scrollTop:0}, 'slow');
+            jQuery('html, body').animate({scrollTop:0}, 'slow');
         });
 
         function showHideToTopBtn() {
-            if ($(window).scrollTop() < 200) {
+            if (jQuery(window).scrollTop() < 200) {
                 toTopBtn.fadeOut();
-            } else if ($(window).scrollTop() > 200) {
+            } else if (jQuery(window).scrollTop() > 200) {
                 toTopBtn.fadeIn();
             }
         }
-        
+
         function initPageVisibilityAPI() {
-            var hidden, visibilityChange;
+            let hidden, visibilityChange;
 
             // Opera 12.10 and Firefox 18 and later support
             if (typeof document.hidden !== 'undefined') {
@@ -60,12 +64,12 @@
 
             function _handleVisibilityChange(event) {
                 if (document[hidden]) {
-                    app.visibilityChangeEvent.publish(event);
+                    PublishSubscribe.publish(PUB_SUB.PAGE_VISIBILITY, {event});
                 } else {
                     // page is visible you may continue doing what was stopped
-                    app.visibilityChangeEvent.publish(event, 'continue');
+                    PublishSubscribe.publish(PUB_SUB.PAGE_VISIBILITY, {event, action: 'continue'});
                 }
             }
         }
     });
-}(jQuery));
+}

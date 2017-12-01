@@ -41,8 +41,7 @@ gulp.task('html-build', function() {
 gulp.task('libs', function() {
   return gulp.src([
       `${config.PATHS.vendor}/jquery.js`,
-      `${config.PATHS.app}/helpers/appGlobal.js`,
-      `${config.PATHS.app}/helpers/domReady.js`
+      `${config.PATHS.app}/helpers/appGlobal.js`
     ])
     .pipe(gulpif(!gutil.env.production, sourcemaps.init()))
     .pipe(concat('libs.js'))

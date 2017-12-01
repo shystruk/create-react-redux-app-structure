@@ -1,6 +1,8 @@
 'use strict';
 
 import React, { Component } from 'react';
+import PublishSubscribe from 'publish-subscribe-js';
+import { PUB_SUB } from './../../constants/events.constant';
 import { Resize_SubPub_Action_Interface } from './../../helpers/interfaces';
 
 export default class Resize_SubPub_Action extends Component {
@@ -14,17 +16,20 @@ export default class Resize_SubPub_Action extends Component {
         this.updateSizes = this.updateSizes.bind(this);
     }
 
-    updateSizes() {
-        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    updateSizes(data = {}) {
+        this.setState({
+            width: data.width || window.innerWidth,
+            height: data.height || window.innerHeight
+        });
     }
 
     componentDidMount() {
         this.updateSizes();
-        this.resizeSubKey = app.resizeEvent.subscribe(this.updateSizes);
+        this.resizeSubKey = PublishSubscribe.subscribe(PUB_SUB.RESIZE, this.updateSizes);
     }
 
     componentWillUnmount() {
-        app.resizeEvent.unsubscribe(this.resizeSubKey);
+        PublishSubscribe.unsubscribe(PUB_SUB.RESIZE, this.resizeSubKey);
     }
 
     render() {

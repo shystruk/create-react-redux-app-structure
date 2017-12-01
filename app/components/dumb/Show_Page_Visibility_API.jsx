@@ -1,7 +1,9 @@
 'use strict';
 
 import React, { Component } from 'react';
+import PublishSubscribe from 'publish-subscribe-js';
 import { Show_Page_Visibility_API_Interface } from './../../helpers/interfaces';
+import { PUB_SUB } from './../../constants/events.constant';
 import SetInterval from 'set-interval';
 import store from './../../store';
 import { showAlert } from './../../actions/alert';
@@ -26,11 +28,10 @@ export default class Show_Page_Visibility_API extends Component {
     }
 
     /**
-     * @param {Object} event
-     * @param {String} action
+     * @param {Object} data
      */
-    handleVisibilityChange(event, action) {
-        if (action === 'continue') {
+    handleVisibilityChange(data) {
+        if (data.action === 'continue') {
             SetInterval.start(this.simulateHTTPRequest, 1000);
             store.dispatch(showAlert('Seems like the page was not visible. Do not worry, we keep working :)'));
         } else {
@@ -40,13 +41,13 @@ export default class Show_Page_Visibility_API extends Component {
 
     componentDidMount() {
         SetInterval.start(this.simulateHTTPRequest, 1000);
-        this.visibilityChangeSubKey = app.visibilityChangeEvent.subscribe(this.handleVisibilityChange);
+        this.visibilityChangeSubKey = PublishSubscribe.subscribe(PUB_SUB.PAGE_VISIBILITY, this.handleVisibilityChange);
     }
 
     componentWillUnmount() {
         this.unmount = true;
         SetInterval.clear();
-        app.visibilityChangeEvent.unsubscribe(this.visibilityChangeSubKey);
+        PublishSubscribe.unsubscribe(PUB_SUB.PAGE_VISIBILITY, this.visibilityChangeSubKey);
     }
 
     render() {
