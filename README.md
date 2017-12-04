@@ -19,7 +19,10 @@ Create React + Redux app structure with build configurations.
 - Code Coverage (https://codecov.io)
 - Travis CI runs Unit and E2E tests and report to codecov
 
-## Getting Started ##
+## Quick Start ##
+Create React + Redux app structure works on macOS, Windows, and Linux.
+If something doesn’t work, please file an [issue](https://github.com/shystruk/create-react-redux-app-structure/issues/new).
+
 ```
 npm i -g create-react-redux-app-structure 
 OR
@@ -29,6 +32,25 @@ create-react-redux-app-structure my-app
 cd my-app/
 npm run fast-start
 ```
+http://localhost:8080/ will be opened automaticaly.
+
+When you are ready to deploy to staing/production please see [Build Scripts](#build-scripts) section.
+
+## Getting Started ##
+Install it once globally:
+```
+npm i -g create-react-redux-app-structure 
+OR
+yarn add -g create-react-redux-app-structure
+```
+
+### Creating an App ###
+To create a new app, run:
+```
+create-react-redux-app-structure my-app
+cd my-app/
+```
+It will create a directory called my-app inside the current folder.
 
 ### Prepare config.json for build configurations ###
 For running builds you need to have **config.json** in app/ folder.
