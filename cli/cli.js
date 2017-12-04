@@ -14,5 +14,7 @@ program
 if (program.args.length > 0) {
     spawn(build(program.args[0]), { shell: true, stdio: 'inherit' });
 } else if (program.args.length < 1) {
+    console.log('----------------------------------------------------------');
     console.log(chalk.red('Please supply a name for your new React Redux app structure'));
+    console.log('----------------------------------------------------------');
 }
