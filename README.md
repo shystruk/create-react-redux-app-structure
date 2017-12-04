@@ -32,7 +32,7 @@ create-react-redux-app-structure my-app
 cd my-app/
 npm run fast-start
 ```
-http://localhost:8080/ will be opened automaticaly.
+http://localhost:8080/ will be opened automatically.
 
 When you are ready to deploy to staing/production please see [Build Scripts](#build-scripts) section.
 
