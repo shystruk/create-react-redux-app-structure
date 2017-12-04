@@ -2,7 +2,7 @@
 
 const program = require('commander');
 const spawn = require('child_process').spawn;
-const package = require('../package.json');
+const package = require('./../package.json');
 const chalk = require('chalk');
 const build = require('./build');
 
