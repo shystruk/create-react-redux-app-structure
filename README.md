@@ -43,6 +43,7 @@ npm i -g create-react-redux-app-structure
 OR
 yarn add -g create-react-redux-app-structure
 ```
+> Patience, please. It takes time, most of it is spent installing npm packages.
 
 ### Creating an App ###
 To create a new app, run:
