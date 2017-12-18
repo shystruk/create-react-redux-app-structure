@@ -23,11 +23,13 @@ Create React + Redux app structure with build configurations.
 Create React + Redux app structure works on macOS, Windows, and Linux.
 If something doesn’t work, please file an [issue](https://github.com/shystruk/create-react-redux-app-structure/issues/new).
 
-```
-npm i -g create-react-redux-app-structure 
-OR
-yarn add -g create-react-redux-app-structure
+#### npm
+`npm i -g create-react-redux-app-structure`
 
+#### yarn
+`yarn add -g create-react-redux-app-structure`
+
+```
 create-react-redux-app-structure my-app
 cd my-app/
 npm run fast-start
@@ -38,11 +40,13 @@ When you are ready to deploy to staing/production please see [Build Scripts](#bu
 
 ## Getting Started ##
 Install it once globally:
-```
-npm i -g create-react-redux-app-structure 
-OR
-yarn add -g create-react-redux-app-structure
-```
+
+#### npm
+`npm i -g create-react-redux-app-structure`
+
+#### yarn
+`yarn add -g create-react-redux-app-structure`
+
 > Patience, please. It takes time, most of it is spent installing npm packages.
 
 ### Creating an App ###
