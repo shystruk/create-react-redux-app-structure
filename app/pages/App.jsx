@@ -6,9 +6,12 @@ import { connect } from 'react-redux';
 import store from './../store';
 
 import noInternet from 'no-internet';
+import isEmpty from 'lodash/isEmpty';
 
-import { showAlert } from './../actions/alert';
+import { pushNotification, removeNotification } from './../actions/notification';
+
 import Alert from './../services/Alert';
+import Notification from './../services/Notification';
 
 import Home from './Home/Home';
 import About from './About/About';
@@ -19,7 +22,8 @@ function mapStateToProps(store, props) {
     return {
         alert: store.alert,
         weather: store.weather,
-        weatherCities: store.weatherCities
+        weatherCities: store.weatherCities,
+        notification: store.notification
     }
 }
 
@@ -29,15 +33,18 @@ class App extends Component {
     }
 
     componentDidMount() {
-        noInternet({callback: function (offline) {
-            if (offline) {
-                store.dispatch(showAlert('You are not connected :('));
+        noInternet({callback: (offline) => {
+            if (offline && isEmpty(this.props.notification.message)) {
+                store.dispatch(pushNotification('You are offline 😎'));
+            } else if (!offline && !isEmpty(this.props.notification.message)) {
+                store.dispatch(removeNotification());
             }
         }});
     }
 
     render() {
         let alertStore = this.props.alert;
+        let notificationStore = this.props.notification;
 
         return <div className="app">
 
@@ -55,6 +62,8 @@ class App extends Component {
             <Route path="/resize" component={Resize_SubPub} />
 
             <Alert alert={alertStore} />
+
+            <Notification notification={notificationStore} />
         </div>
     }
 }
