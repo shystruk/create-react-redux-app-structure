@@ -3,6 +3,12 @@
 import React, { Component } from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import store from './../store';
+
+import noInternet from 'no-internet';
+
+import { showAlert } from './../actions/alert';
+import Alert from './../services/Alert';
 
 import Home from './Home/Home';
 import About from './About/About';
@@ -22,7 +28,17 @@ class App extends Component {
         super();
     }
 
+    componentDidMount() {
+        noInternet({callback: function (offline) {
+            if (offline) {
+                store.dispatch(showAlert('You are not connected :('));
+            }
+        }});
+    }
+
     render() {
+        let alertStore = this.props.alert;
+
         return <div className="app">
 
             <ul className="app-navigation">
@@ -37,6 +53,8 @@ class App extends Component {
             <Route path="/about" render={() => <About {...this.props} /> } />
             <Route path="/visibility" render={() => <Page_Visibility_API {...this.props} /> } />
             <Route path="/resize" component={Resize_SubPub} />
+
+            <Alert alert={alertStore} />
         </div>
     }
 }

@@ -4406,19 +4406,19 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-js-yaml@^3.3.0, js-yaml@^3.4.3, js-yaml@~3.5.2:
-  version "3.5.5"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.5.5.tgz#0377c38017cabc7322b0d1fbcd25a491641f2fbe"
-  dependencies:
-    argparse "^1.0.2"
-    esprima "^2.6.0"
-
-js-yaml@^3.7.0, js-yaml@^3.9.1:
+js-yaml@^3.3.0, js-yaml@^3.4.3, js-yaml@^3.7.0, js-yaml@^3.9.1:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
+
+js-yaml@~3.5.2:
+  version "3.5.5"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.5.5.tgz#0377c38017cabc7322b0d1fbcd25a491641f2fbe"
+  dependencies:
+    argparse "^1.0.2"
+    esprima "^2.6.0"
 
 jsbn@~0.1.0:
   version "0.1.1"
@@ -5276,6 +5276,12 @@ negotiator@0.6.1:
 next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+
+no-internet@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/no-internet/-/no-internet-1.1.0.tgz#f746cd640c5f210d963642f2b7a36caff5e1088d"
+  dependencies:
+    set-interval "^1.0.8"
 
 node-fetch@^1.0.1, node-fetch@^1.7.3:
   version "1.7.3"
@@ -6694,6 +6700,10 @@ set-immediate-shim@^1.0.1:
 set-interval@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/set-interval/-/set-interval-1.0.5.tgz#30c1ee24ec3d750dc7318ee42acb931eb3b9a69b"
+
+set-interval@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/set-interval/-/set-interval-1.0.8.tgz#9a0638c2f9fb1a59e7850891b3631837d657fe3e"
 
 setimmediate@^1.0.4, setimmediate@^1.0.5:
   version "1.0.5"

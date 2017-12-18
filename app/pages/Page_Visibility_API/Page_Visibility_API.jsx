@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import Show_Page_Visibility_API from './../../components/dumb/Show_Page_Visibility_API';
-import Alert from './../../services/Alert';
 
 export default class Page_Visibility_API extends Component {
     constructor() {
@@ -25,8 +24,6 @@ export default class Page_Visibility_API extends Component {
             <p>Do you still perform unnecessary tasks when the webpage is not visible?</p>
 
             <Show_Page_Visibility_API alert={alertStore} />
-
-            <Alert alert={alertStore} />
         </div>
     }
 }
