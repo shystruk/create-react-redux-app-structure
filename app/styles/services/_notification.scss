@@ -1,0 +1,9 @@
+.bs-notification-service {
+  &.fadeInDown .bs-notification-service-ms {
+    padding: 10px 16px
+  }
+
+  &.animated {
+    animation-duration: 2s;
+  }
+}
