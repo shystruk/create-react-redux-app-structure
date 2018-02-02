@@ -46,25 +46,27 @@ class App extends Component {
         let alertStore = this.props.alert;
         let notificationStore = this.props.notification;
 
-        return <div className="app">
+        return (
+            <div className="app">
 
-            <ul className="app-navigation">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/resize">Resize_SubPub</Link></li>
-                <li><Link to="/visibility">Page_Visibility_API</Link></li>
-            </ul>
+                <ul className="app-navigation">
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/resize">Resize_SubPub</Link></li>
+                    <li><Link to="/visibility">Page_Visibility_API</Link></li>
+                </ul>
 
 
-            <Route exact path="/" render={() => <Home {...this.props} /> } />
-            <Route path="/about" render={() => <About {...this.props} /> } />
-            <Route path="/visibility" render={() => <Page_Visibility_API {...this.props} /> } />
-            <Route path="/resize" component={Resize_SubPub} />
+                <Route exact path="/" render={() => <Home {...this.props} /> } />
+                <Route path="/about" render={() => <About {...this.props} /> } />
+                <Route path="/visibility" render={() => <Page_Visibility_API {...this.props} /> } />
+                <Route path="/resize" component={Resize_SubPub} />
 
-            <Alert alert={alertStore} />
+                <Alert alert={alertStore} />
 
-            <Notification notification={notificationStore} />
-        </div>
+                <Notification notification={notificationStore} />
+            </div>
+        )
     }
 }
 

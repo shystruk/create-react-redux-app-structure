@@ -97,22 +97,24 @@ export default class Open_Weather extends Component {
     }
 
     render() {
-        return <div className="app-open-weather-search">
+        return (
+            <div className="app-open-weather-search">
 
-            <h3>Current weather in your city</h3>
+                <h3>Current weather in your city</h3>
 
-            <input type="text" name="cityName" placeholder="Your city name" value={this.state.cityName}
-                   onChange={this.handleChange} onKeyUp={this.handleKeyUp}/>
-            <label>
-                <input type="checkbox" name="isCityList" value={this.state.isCityList} onChange={this.handleChange}/>
-                <span>List of cities</span>
-            </label>
+                <input type="text" name="cityName" placeholder="Your city name" value={this.state.cityName}
+                       onChange={this.handleChange} onKeyUp={this.handleKeyUp}/>
+                <label>
+                    <input type="checkbox" name="isCityList" value={this.state.isCityList} onChange={this.handleChange}/>
+                    <span>List of cities</span>
+                </label>
 
-            <button onClick={this.handleSearch} type="button">Search</button>
+                <button onClick={this.handleSearch} type="button">Search</button>
 
-            <img className={"app-preload " + (this.state.preload ? 'displayBlock' : 'displayNone')}
-                 src="./images/loader.gif"/>
+                <img className={"app-preload " + (this.state.preload ? 'displayBlock' : 'displayNone')}
+                     src="./images/loader.gif"/>
 
-        </div>
+            </div>
+        )
     }
 }
