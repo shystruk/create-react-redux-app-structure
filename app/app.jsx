@@ -5,6 +5,7 @@ import ReactDom from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
+import _find from 'lodash/find';
 import DOMReady from './helpers/domReady';
 DOMReady();
 
@@ -19,13 +20,17 @@ addLocaleData([...en, ...es, ...fr]);
 
 import App from './pages/App';
 
+let locale = _find(['en', 'es', 'fr'], (locale) => {
+    return app.locale.indexOf(locale) !== -1;
+});
+
 /* staging-code */
 window.store = store;
 /* end-staging-code */
 
 ReactDom.render(
     <Provider store={store}>
-        <IntlProvider locale={app.locale} messages={messages[app.locale]}>
+        <IntlProvider locale={app.locale} messages={messages[locale]}>
             <Router>
                 <App/>
             </Router>

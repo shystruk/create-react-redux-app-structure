@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { FormattedMessage } from 'react-intl';
 import store from './../../store';
 
 import { removeWeatherFromList } from './../../actions/weather_list';
@@ -31,7 +32,7 @@ export default class Home extends Component {
         return (
             <div className="app-home">
 
-                <h1>Home</h1>
+                <h1><FormattedMessage id="pages.home"/></h1>
 
                 <Open_Weather_Search weather={weatherStore} />
 

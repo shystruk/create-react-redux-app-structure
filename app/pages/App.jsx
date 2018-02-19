@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl';
 import store from './../store';
 
 import noInternet from 'no-internet';

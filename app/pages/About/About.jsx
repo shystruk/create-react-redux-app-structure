@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import Open_Weather_Search from './../../components/Open_Weather_Search/Open_Weather_Search';
 import Weather_View from './../../components/dumb/Weather_View';
@@ -17,7 +18,7 @@ export default class About extends Component {
         return (
             <div className="app-about">
 
-                <h1>About</h1>
+                <h1><FormattedMessage id="pages.about"/></h1>
 
                 <p><em>You are not able to remove weather from the list on this page :)</em></p>
 

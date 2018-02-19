@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { FormattedMessage } from 'react-intl';
 import Resize_SubPub_Action from './../../components/dumb/Resize_SubPub_Action';
 
 export default class Resize_SubPub extends Component {
@@ -11,7 +12,7 @@ export default class Resize_SubPub extends Component {
     render() {
         return (
             <div className="app-resize-subpub">
-                <h1>Resize SubPub</h1>
+                <h1><FormattedMessage id="pages.resize_subpub"/></h1>
 
                 <p>
                     <em>For more details about Resize listener here read this

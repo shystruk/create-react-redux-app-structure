@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { FormattedMessage } from 'react-intl';
 import Show_Page_Visibility_API from './../../components/dumb/Show_Page_Visibility_API';
 
 export default class Page_Visibility_API extends Component {
@@ -13,7 +14,7 @@ export default class Page_Visibility_API extends Component {
 
         return (
             <div className="app-page-visibility-api">
-                <h1>Page Visibility API</h1>
+                <h1><FormattedMessage id="pages.page_visibility_api"/></h1>
 
                 <p>
                     <em>For more details about counter here read this

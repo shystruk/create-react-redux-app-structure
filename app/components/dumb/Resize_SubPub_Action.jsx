@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { FormattedHTMLMessage } from 'react-intl';
 import PublishSubscribe from 'publish-subscribe-js';
 import { PUB_SUB } from './../../constants/events.constant';
 import { Resize_SubPub_Action_Interface } from './../../helpers/interfaces';
@@ -35,8 +36,8 @@ export default class Resize_SubPub_Action extends Component {
     render() {
         return (
             <div className="app-resize-pubsub">
-                <div><strong>Width: {this.state.width}</strong></div>
-                <div><strong>Height: {this.state.height}</strong></div>
+                <div><FormattedHTMLMessage id="dumb.display_width" values={{width: this.state.width}} /></div>
+                <div><FormattedHTMLMessage id="dumb.display_height" values={{height: this.state.height}} /></div>
                 <br />
             </div>
         )
