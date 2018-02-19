@@ -8,6 +8,7 @@ Create React + Redux app structure with build configurations.
 - Express, Cors
 - React + Redux, ES6, async/await
 - React Router
+- Internationalization
 - SASS
 - PostCSS (autoprefixer), so you do not need -webkit, -moz or other prefixes
 - Build script configuration **Development, Staging, Production** with CDN, [cache-busting](https://www.keycdn.com/support/what-is-cache-busting/) support
