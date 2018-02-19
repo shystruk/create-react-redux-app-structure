@@ -35,22 +35,24 @@ export default class Weather_View extends Component {
             oneCity = <li>{Weather_View.weatherTemplate(weather.data)}</li>;
         }
 
-        return <div className="app-weather-view">
-            <ul>
-                {oneCity}
+        return (
+            <div className="app-weather-view">
+                <ul>
+                    {oneCity}
 
-                {weatherList.reverse().map((weather, index) => {
-                    return <li key={index} onClick={scrollTo.bind(this, '.app-open-weather-search', void 0)}>
+                    {weatherList.reverse().map((weather, index) => {
+                        return <li key={index} onClick={scrollTo.bind(this, '.app-open-weather-search', void 0)}>
 
-                        {Weather_View.weatherTemplate(weather)}
+                            {Weather_View.weatherTemplate(weather)}
 
-                        <button onClick={this.props.remove ? this.props.remove.bind(this, index) : app.noop}
-                                className="app-weather-view-remove" disabled={!this.props.remove}>
-                            x
-                        </button>
-                    </li>
-                })}
-            </ul>
-        </div>
+                            <button onClick={this.props.remove ? this.props.remove.bind(this, index) : app.noop}
+                                    className="app-weather-view-remove" disabled={!this.props.remove}>
+                                x
+                            </button>
+                        </li>
+                    })}
+                </ul>
+            </div>
+        )
     }
 }

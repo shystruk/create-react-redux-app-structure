@@ -33,12 +33,12 @@ export default class Resize_SubPub_Action extends Component {
     }
 
     render() {
-        return <div className="app-resize-pubsub">
-
-            <div><strong>Width: {this.state.width}</strong></div>
-            <div><strong>Height: {this.state.height}</strong></div>
-            <br />
-
-        </div>
+        return (
+            <div className="app-resize-pubsub">
+                <div><strong>Width: {this.state.width}</strong></div>
+                <div><strong>Height: {this.state.height}</strong></div>
+                <br />
+            </div>
+        )
     }
 }

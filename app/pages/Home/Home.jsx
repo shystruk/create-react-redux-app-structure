@@ -28,14 +28,16 @@ export default class Home extends Component {
         let weatherStore = this.props.weather;
         let weatherListStore = this.props.weatherCities;
 
-        return <div className="app-home">
+        return (
+            <div className="app-home">
 
-            <h1>Home</h1>
+                <h1>Home</h1>
 
-            <Open_Weather_Search weather={weatherStore} />
+                <Open_Weather_Search weather={weatherStore} />
 
-            <Weather_View weather={weatherStore} weatherList={weatherListStore.weatherList}
-                          remove={Home.removeWeather} />
-        </div>
+                <Weather_View weather={weatherStore} weatherList={weatherListStore.weatherList}
+                              remove={Home.removeWeather} />
+            </div>
+        )
     }
 }

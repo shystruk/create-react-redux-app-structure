@@ -14,15 +14,17 @@ export default class About extends Component {
         let weatherStore = this.props.weather;
         let weatherListStore = this.props.weatherCities;
 
-        return <div className="app-about">
+        return (
+            <div className="app-about">
 
-            <h1>About</h1>
+                <h1>About</h1>
 
-            <p><em>You are not able to remove weather from the list on this page :)</em></p>
+                <p><em>You are not able to remove weather from the list on this page :)</em></p>
 
-            <Open_Weather_Search weather={weatherStore} />
+                <Open_Weather_Search weather={weatherStore} />
 
-            <Weather_View weather={weatherStore} weatherList={weatherListStore.weatherList} />
-        </div>
+                <Weather_View weather={weatherStore} weatherList={weatherListStore.weatherList} />
+            </div>
+        )
     }
 }

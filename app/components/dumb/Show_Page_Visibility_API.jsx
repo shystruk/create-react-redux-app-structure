@@ -51,11 +51,11 @@ export default class Show_Page_Visibility_API extends Component {
     }
 
     render() {
-        return <div className="app-show-page-visibility-api">
-
-            <br/>
-            <h2>Amount of new users: {this.state.amountOfNewUsers}</h2>
-
-        </div>
+        return (
+            <div className="app-show-page-visibility-api">
+                <br/>
+                <h2>Amount of new users: {this.state.amountOfNewUsers}</h2>
+            </div>
+        )
     }
 }
