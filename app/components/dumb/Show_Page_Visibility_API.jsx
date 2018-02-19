@@ -7,6 +7,7 @@ import { PUB_SUB } from './../../constants/events.constant';
 import SetInterval from 'set-interval';
 import store from './../../store';
 import { showAlert } from './../../actions/alert';
+import { FormattedMessage } from 'react-intl'
 
 export default class Show_Page_Visibility_API extends Component {
     constructor() {
@@ -54,7 +55,9 @@ export default class Show_Page_Visibility_API extends Component {
         return (
             <div className="app-show-page-visibility-api">
                 <br/>
-                <h2>Amount of new users: {this.state.amountOfNewUsers}</h2>
+                <h2>
+                    <FormattedMessage id="dumb.amount_of_new_users" values={{amountOfUsers: this.state.amountOfNewUsers}} />
+                </h2>
             </div>
         )
     }

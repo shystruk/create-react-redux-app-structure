@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl'
 import store from './../store';
 
 import noInternet from 'no-internet';
@@ -10,9 +11,11 @@ import isEmpty from 'lodash/isEmpty';
 
 import { pushNotification, removeNotification } from './../actions/notification';
 
+// Services
 import Alert from './../services/Alert';
 import Notification from './../services/Notification';
 
+// Pages
 import Home from './Home/Home';
 import About from './About/About';
 import Resize_SubPub from './Resize_SubPub/Resize_SubPub';
@@ -50,12 +53,11 @@ class App extends Component {
             <div className="app">
 
                 <ul className="app-navigation">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/resize">Resize_SubPub</Link></li>
-                    <li><Link to="/visibility">Page_Visibility_API</Link></li>
+                    <li><Link to="/"><FormattedMessage id="pages.home"/></Link></li>
+                    <li><Link to="/about"><FormattedMessage id="pages.about"/></Link></li>
+                    <li><Link to="/resize"><FormattedMessage id="pages.resize_subpub"/></Link></li>
+                    <li><Link to="/visibility"><FormattedMessage id="pages.page_visibility_api"/></Link></li>
                 </ul>
-
 
                 <Route exact path="/" render={() => <Home {...this.props} /> } />
                 <Route path="/about" render={() => <About {...this.props} /> } />

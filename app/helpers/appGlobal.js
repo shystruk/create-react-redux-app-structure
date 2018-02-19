@@ -13,4 +13,10 @@ var app = app || {};
      */
     app.noop = Object.freeze(function(){});
 
+    app.locale = 
+        (navigator.languages && navigator.languages[0])
+        || navigator.language
+        || navigator.userLanguage
+        || 'en';
+
 }());
