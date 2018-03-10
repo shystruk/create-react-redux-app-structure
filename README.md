@@ -124,3 +124,7 @@ Kill all node processes:
 ## Contributing ##
 I would love to have your help. If you have an idea how to improve, change the app structure please submit a pull request or create an issue.
 Thanks!
+
+## License
+
+MIT © [Vasyl Stokolosa](https://about.me/shystruk)
