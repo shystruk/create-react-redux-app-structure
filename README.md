@@ -122,7 +122,10 @@ Kill all node processes:
 - [Do you still register window event listeners in each component?](https://medium.com/@shystruk/do-you-still-register-window-event-listeners-in-each-component-react-in-example-31a4b1f6f1c8)
 
 ## Contributing ##
-I would love to have your help. If you have an idea how to improve, change the app structure please submit a pull request or create an issue.
+
+I would love to have your help. 
+
+If you have an idea how to improve or found an issue please read the [Contributions Guidelines](CONTRIBUTING.md) before submitting a PR.
 Thanks!
 
 ## License
