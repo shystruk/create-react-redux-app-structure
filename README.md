@@ -37,7 +37,7 @@ npm run fast-start
 ```
 http://localhost:8080/ will be opened automatically.
 
-When you are ready to deploy to staing/production please see [Build Scripts](#build-scripts) section.
+When you are ready to deploy to staging/production please see [Build Scripts](#build-scripts) section.
 
 ## Getting Started ##
 Install it once globally:
@@ -113,7 +113,7 @@ window.store = store;
 
 ## Tips ##
 Kill all node processes:
-- MacOS `sudo kilall -9 node`
+- MacOS `sudo killall -9 node`
 - Windows (cmd) `taskkill /f /im node.exe`
 
 ## Detailed description about features and approaches ##
