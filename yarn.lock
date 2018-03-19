@@ -6736,13 +6736,13 @@ set-immediate-shim@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/set-immediate-shim/-/set-immediate-shim-1.0.1.tgz#4b2b1b27eb808a9f8dcc481a58e5e56f599f3f61"
 
-set-interval@^1.0.0:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/set-interval/-/set-interval-1.0.5.tgz#30c1ee24ec3d750dc7318ee42acb931eb3b9a69b"
-
 set-interval@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/set-interval/-/set-interval-1.0.8.tgz#9a0638c2f9fb1a59e7850891b3631837d657fe3e"
+
+set-interval@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/set-interval/-/set-interval-2.0.0.tgz#3d08c880686f2c142e97d3df6f1ea8667ae5088c"
 
 setimmediate@^1.0.4, setimmediate@^1.0.5:
   version "1.0.5"

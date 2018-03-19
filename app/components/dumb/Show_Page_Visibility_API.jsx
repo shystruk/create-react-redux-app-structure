@@ -33,21 +33,21 @@ export default class Show_Page_Visibility_API extends Component {
      */
     handleVisibilityChange(data) {
         if (data.action === 'continue') {
-            SetInterval.start(this.simulateHTTPRequest, 1000);
+            SetInterval.start(this.simulateHTTPRequest, 1000, 'page_visibility');
             store.dispatch(showAlert('Seems like the page was not visible. Do not worry, we keep working :)'));
         } else {
-            SetInterval.clear();
+            SetInterval.clear('page_visibility');
         }
     }
 
     componentDidMount() {
-        SetInterval.start(this.simulateHTTPRequest, 1000);
+        SetInterval.start(this.simulateHTTPRequest, 1000, 'page_visibility');
         this.visibilityChangeSubKey = PublishSubscribe.subscribe(PUB_SUB.PAGE_VISIBILITY, this.handleVisibilityChange);
     }
 
     componentWillUnmount() {
         this.unmount = true;
-        SetInterval.clear();
+        SetInterval.clear('page_visibility');
         PublishSubscribe.unsubscribe(PUB_SUB.PAGE_VISIBILITY, this.visibilityChangeSubKey);
     }
 
