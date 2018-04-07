@@ -24,9 +24,9 @@
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
     "report-coverage": "cat ./app/tests/__tests__/coverage/lcov.info | codecov",
-    "e2e": "run-p --race dev server:e2e cypress:run",
+    "e2e": "run-p --race prod server:e2e cypress:run",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --spec ./app/tests/e2e/cypress/integration/create_react_redux_app_structure_spec.js",
+    "cypress:run": "cypress run --spec ./app/tests/e2e/cypress/integration/example_spec.js",
     "open-localhost": "opn http://localhost:8080/",
     "eslint": "./node_modules/.bin/eslint app/"
   },
