@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Resize_SubPub_Action from './../../components/dumb/Resize_SubPub_Action';

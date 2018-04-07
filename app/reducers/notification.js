@@ -1,5 +1,3 @@
-'use strict';
-
 import { SHOW_NOTIFICATION, REMOVE_NOTIFICATION } from './../actions/notification';
 
 const initialState = {};

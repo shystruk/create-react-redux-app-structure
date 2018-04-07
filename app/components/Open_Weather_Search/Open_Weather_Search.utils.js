@@ -1,5 +1,3 @@
-'use strict';
-
 import _lowerCase from 'lodash/lowerCase';
 
 /**

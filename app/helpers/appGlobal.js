@@ -6,8 +6,6 @@
 var app = app || {};
 
 (function () {
-'use strict';
-
     /**
      * A function that performs no operations.
      */

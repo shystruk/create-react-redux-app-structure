@@ -1,5 +1,3 @@
-'use strict';
-
 import { URL } from '../request.constant';
 
 export const API_KEY = '21f7dd457b739d8e583a82c904c09054';

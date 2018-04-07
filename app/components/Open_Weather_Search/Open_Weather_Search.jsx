@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component } from 'react';
 import store from './../../store';
 import { pushWeather, fetchWeather } from './../../actions/weather';

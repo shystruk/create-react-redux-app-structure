@@ -1,5 +1,3 @@
-'use strict';
-
 import _find from 'lodash/find';
 import _includes from 'lodash/includes';
 

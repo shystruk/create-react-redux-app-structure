@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component } from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import PublishSubscribe from 'publish-subscribe-js';

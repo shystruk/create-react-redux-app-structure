@@ -1,5 +1,3 @@
-'use strict';
-
 export const PUSH_WEATHER_LIST = 'PUSH_WEATHER_LIST';
 export const REMOVE_WEATHER_FROM_LIST = 'REMOVE_WEATHER_FROM_LIST';
 
@@ -24,5 +22,3 @@ export function removeWeatherFromList(index) {
         index
     };
 }
-
-

@@ -7,8 +7,6 @@ import PublishSubscribe from 'publish-subscribe-js';
 import jQuery from 'jquery';
 import { PUB_SUB } from './../constants/events.constant';
 
-'use strict';
-
 export default function DOMReady() {
     jQuery(document).ready(function() {
         const toTopBtn = jQuery('#toTop');

@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component } from 'react';
 import isEmpty from 'lodash/isEmpty';
 import store from './../store';

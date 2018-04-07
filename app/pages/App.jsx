@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component } from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';

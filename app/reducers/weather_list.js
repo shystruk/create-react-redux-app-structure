@@ -1,5 +1,3 @@
-'use strict';
-
 import { PUSH_WEATHER_LIST, REMOVE_WEATHER_FROM_LIST } from './../actions/weather';
 
 const initialState = {

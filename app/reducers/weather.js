@@ -1,5 +1,3 @@
-'use strict';
-
 import { PUSH_WEATHER, REQUEST_WEATHER, RECEIVE_WEATHER } from './../actions/weather';
 
 const initialState = {

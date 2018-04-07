@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
@@ -23,10 +23,10 @@ const common = {
     },
     devtool: 'source-map',
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loaders: 'babel-loader',
+                use: 'babel-loader',
                 // TODO: for own project replace to /node_modules/
                 // Exclude app.jsx for npm as we use a module in node_modules that is JSX.
                 // babel-loader is excluding it so it doesn't read it,
@@ -37,7 +37,7 @@ const common = {
             },
             {
                 test: /\.jsx$/,
-                loaders: 'babel-loader',
+                use: 'babel-loader',
                 exclude: /node_modules\/(?!(app)\/).*/,
                 include: PATHS.app
             }
@@ -54,14 +54,15 @@ if (TARGET === 'dev' || TARGET === 'fast-start' || !TARGET) {
 
 if (TARGET === 'prod' || TARGET === 'staging') {
     module.exports = merge(common, {
+        optimization: {
+            minimize: true,
+            minimizer: [
+              new UglifyJsPlugin({
+                sourceMap: false
+              })
+            ]
+        },
         plugins: [
-            new UglifyJSPlugin({
-                exclude: [/\.min\.js$/gi],
-                mangle: true,
-                output: {
-                    comments: false,
-                }
-            }),
             new webpack.DefinePlugin({
                 'process.env':{
                     'NODE_ENV': JSON.stringify('production')

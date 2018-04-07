@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Show_Page_Visibility_API from './../../components/dumb/Show_Page_Visibility_API';

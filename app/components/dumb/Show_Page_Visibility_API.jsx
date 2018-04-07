@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component } from 'react';
 import PublishSubscribe from 'publish-subscribe-js';
 import { Show_Page_Visibility_API_Interface } from './../../helpers/interfaces';

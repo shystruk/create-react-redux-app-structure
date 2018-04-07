@@ -3,8 +3,6 @@
  * Validation helpers
  */
 
-'use strict';
-
 /**
  * @param {String} email
  */

@@ -1,5 +1,3 @@
-'use strict';
-
 import { getWeatherData } from './../resources/Open_Weather.resource';
 import { parseWeatherResponseForUI } from './../components/Open_Weather_Search/Open_Weather_Search.utils';
 

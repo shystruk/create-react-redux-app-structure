@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -23,9 +21,6 @@ let locale = _find(['en', 'es', 'fr'], (locale) => {
     return app.locale.indexOf(locale) !== -1;
 });
 
-/* staging-code */
-window.store = store;
-/* end-staging-code */
 
 ReactDom.render(
     <Provider store={store}>

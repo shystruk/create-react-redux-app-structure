@@ -1,5 +1,3 @@
-'use strict';
-
 import { GET_URL_FOR_ONE_CITY, GET_URL_FOR_LIST } from '../constants/components/Open_Weather_Search.constant';
 import ajax from './../resources/ajax';
 

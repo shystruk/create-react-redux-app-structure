@@ -1,5 +1,3 @@
-'use strict';
-
 jest.mock('./../../../../resources/Open_Weather.resource', () => ({
     getWeatherData: jest.fn(() => {
         return Promise.resolve({

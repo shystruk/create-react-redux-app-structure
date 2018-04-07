@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component } from 'react';
 import _isEmpty from 'lodash/isEmpty';
 import { FLAG_IMAGE_URL } from '../../constants/components/Weather_View.constant';

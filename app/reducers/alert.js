@@ -1,5 +1,3 @@
-'use strict';
-
 import { SHOW_ALERT, HIDE_ALERT } from './../actions/alert';
 
 const initialState = {};

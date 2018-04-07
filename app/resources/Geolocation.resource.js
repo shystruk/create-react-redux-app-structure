@@ -1,5 +1,3 @@
-'use strict';
-
 import ajax from './../resources/ajax';
 import { URL } from './../constants/request.constant';
 
