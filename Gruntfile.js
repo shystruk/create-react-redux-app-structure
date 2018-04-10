@@ -14,6 +14,12 @@ module.exports = function(grunt) {
                 file: './build/libs.js',
                 cleanup: true
             },
+            vendorJs: {
+                replace: ['./index.html'],
+                replacement: 'vendor.js',
+                file: './build/vendor.js',
+                cleanup: true
+            },
             indexJs: {
                 replace: ['./index.html'],
                 replacement: 'index.js',

@@ -30,6 +30,7 @@ gulp.task('html-build', function() {
         .pipe(htmlreplace({
             'css': `${config[TARGET].assetHost}/build/styles.min.css`,
             'js': [
+                `${config[TARGET].assetHost}/build/vendor.js`,
                 `${config[TARGET].assetHost}/build/libs.js`,
                 `${config[TARGET].assetHost}/build/index.js`
             ]
@@ -37,11 +38,11 @@ gulp.task('html-build', function() {
         .pipe(gulp.dest('./'));
 });
 
-// Concat/Uglify extra JS libs
-gulp.task('libs', function() {
-  return gulp.src([
-      `${config.PATHS.vendor}/jquery.js`,
-      `${config.PATHS.app}/helpers/appGlobal.js`
+// Concat/Uglify libs depends on jQuery
+gulp.task('jquery', function() {
+    return gulp.src([
+        `${config.PATHS.vendor}/jquery.js`,
+        `${config.PATHS.app}/helpers/appGlobal.js`
     ])
     .pipe(gulpif(!gutil.env.production, sourcemaps.init()))
     .pipe(concat('libs.js'))
@@ -66,9 +67,9 @@ gulp.task('css', function () {
 // WATCH
 gulp.task('watch', function() {
     gulp.watch(config.PATHS.sass, ['css']);
-    gulp.watch(config.PATHS.external, ['libs']);
+    gulp.watch(config.PATHS.external, ['jquery']);
 });
 
-gulp.task('default', ['html-build', 'watch', 'css', 'libs']);
-gulp.task('prod', ['html-build', 'css', 'libs']);
+gulp.task('default', ['html-build', 'watch', 'css', 'jquery']);
+gulp.task('prod', ['html-build', 'css', 'jquery']);
 gulp.task('clean-build', ['clean']);

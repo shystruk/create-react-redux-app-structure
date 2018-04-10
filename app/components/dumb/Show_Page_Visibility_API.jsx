@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PublishSubscribe from 'publish-subscribe-js';
 import { Show_Page_Visibility_API_Interface } from './../../helpers/interfaces';
 import { PUB_SUB } from './../../constants/events.constant';
@@ -7,7 +7,7 @@ import store from './../../store';
 import { showAlert } from './../../actions/alert';
 import { FormattedMessage } from 'react-intl'
 
-export default class Show_Page_Visibility_API extends Component {
+export default class Show_Page_Visibility_API extends React.Component {
     constructor() {
         super();
 

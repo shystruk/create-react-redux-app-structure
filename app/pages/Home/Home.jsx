@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import store from './../../store';
 
@@ -7,7 +7,7 @@ import { removeWeatherFromList } from './../../actions/weather_list';
 import Open_Weather_Search from './../../components/Open_Weather_Search/Open_Weather_Search';
 import Weather_View from './../../components/dumb/Weather_View';
 
-export default class Home extends Component {
+export default class Home extends React.Component {
     constructor() {
         super();
     }

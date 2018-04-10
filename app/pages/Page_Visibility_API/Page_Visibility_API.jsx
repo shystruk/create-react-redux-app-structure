@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import Show_Page_Visibility_API from './../../components/dumb/Show_Page_Visibility_API';
 
-export default class Page_Visibility_API extends Component {
+export default class Page_Visibility_API extends React.Component {
     constructor() {
         super();
     }

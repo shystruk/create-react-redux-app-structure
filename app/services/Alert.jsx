@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import isEmpty from 'lodash/isEmpty';
 import store from './../store';
 import { hideAlert } from './../actions/alert';
 
-export default class Alert extends Component {
+export default class Alert extends React.Component {
     static closeAlert() {
         store.dispatch(hideAlert());
     }

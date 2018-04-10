@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import PublishSubscribe from 'publish-subscribe-js';
 import { PUB_SUB } from './../../constants/events.constant';
 import { Resize_SubPub_Action_Interface } from './../../helpers/interfaces';
 
-export default class Resize_SubPub_Action extends Component {
+export default class Resize_SubPub_Action extends React.Component {
     constructor() {
         super();
 

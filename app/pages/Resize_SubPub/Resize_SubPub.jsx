@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import Resize_SubPub_Action from './../../components/dumb/Resize_SubPub_Action';
 
-export default class Resize_SubPub extends Component {
+export default class Resize_SubPub extends React.Component {
     constructor() {
         super();
     }

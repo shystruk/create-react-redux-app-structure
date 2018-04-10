@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
@@ -28,7 +28,7 @@ function mapStateToProps(store, props) {
     }
 }
 
-class App extends Component {
+class App extends React.Component {
     constructor() {
         super();
     }

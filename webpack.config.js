@@ -11,15 +11,26 @@ const PATHS = {
 };
 
 const common = {
-    entry: [
-        'babel-polyfill', './app/app.jsx'
-    ],
+    entry: {
+        index: ['babel-polyfill', './app/app.jsx'],
+        vendor: [
+            'react',
+            'react-dom',
+            'react-router-dom',
+            'react-redux',
+            'react-intl',
+            'redux',
+            'redux-promise',
+            'redux-thunk',
+            'redux-logger'
+        ]
+    },
     resolve: {
         extensions: ['.js', '.jsx']
     },
     output: {
         path: PATHS.build,
-        filename: 'index.js'
+        filename: '[name].js'
     },
     devtool: 'source-map',
     module: {
@@ -45,7 +56,7 @@ const common = {
     },
     externals: {
         'jquery': 'jQuery'
-    },
+    }
 };
 
 if (TARGET === 'dev' || TARGET === 'fast-start' || !TARGET) {
@@ -57,14 +68,24 @@ if (TARGET === 'prod' || TARGET === 'staging') {
         optimization: {
             minimize: true,
             minimizer: [
-              new UglifyJsPlugin({
-                sourceMap: false
-              })
-            ]
+                new UglifyJsPlugin({
+                    sourceMap: false
+                })
+            ],
+            splitChunks: {
+                cacheGroups: {
+                    vendor: {
+                        chunks: 'initial',
+                        name: 'vendor',
+                        test: 'vendor',
+                        enforce: true
+                    }
+                }
+            }
         },
         plugins: [
             new webpack.DefinePlugin({
-                'process.env':{
+                'process.env': {
                     'NODE_ENV': JSON.stringify('production')
                 }
             })

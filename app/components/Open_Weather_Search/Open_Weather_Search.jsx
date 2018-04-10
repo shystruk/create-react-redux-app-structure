@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import store from './../../store';
 import { pushWeather, fetchWeather } from './../../actions/weather';
 import { pushWeatherList } from './../../actions/weather_list';
@@ -11,7 +11,7 @@ import { parseWeatherResponseForUI } from './Open_Weather_Search.utils';
 import { KEY_CODES } from './../../constants/keyCodes.constant';
 import { ERROR_MESSAGES } from './../../constants/request.constant';
 
-export default class Open_Weather extends Component {
+export default class Open_Weather extends React.Component {
     constructor() {
         super();
 

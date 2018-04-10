@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import _isEmpty from 'lodash/isEmpty';
 import { FLAG_IMAGE_URL } from '../../constants/components/Weather_View.constant';
 import { scrollTo } from '../../helpers/uiActions';
 
-export default class Weather_View extends Component {
+export default class Weather_View extends React.Component {
 
     /**
      * @param {Object} weather

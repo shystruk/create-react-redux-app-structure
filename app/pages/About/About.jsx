@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import Open_Weather_Search from './../../components/Open_Weather_Search/Open_Weather_Search';
 import Weather_View from './../../components/dumb/Weather_View';
 
-export default class About extends Component {
+export default class About extends React.Component {
     constructor() {
         super();
     }

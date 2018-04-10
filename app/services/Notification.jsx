@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const styles = {
     parent: {
@@ -16,7 +16,7 @@ const styles = {
     }
 };
 
-export default class Notification extends Component {
+export default class Notification extends React.Component {
     render() {
         const message = this.props.notification.message || '';
 
