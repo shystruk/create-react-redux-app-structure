@@ -40,6 +40,9 @@ http://localhost:8080/ will be opened automatically.
 When you are ready to deploy to staging/production please see [Build Scripts](#build-scripts) section.
 
 ## Getting Started ##
+**You will need to have Node >= 6 on your local development machine.**
+> While creating an app you see *new TypeError('"file" argument must be a non-empty string')* do not worry, your app is created and ready to go 👍. Check mode details [here](https://github.com/shystruk/create-react-redux-app-structure/issues/19).
+
 Install it once globally:
 
 #### npm
