@@ -47,10 +47,10 @@ export default class Weather_View extends React.Component {
                                     className="app-weather-view-remove" disabled={!this.props.remove}>
                                 x
                             </button>
-                        </li>
+                        </li>;
                     })}
                 </ul>
             </div>
-        )
+        );
     }
 }

@@ -37,6 +37,6 @@ export default class Home extends React.Component {
                 <Weather_View weather={weatherStore} weatherList={weatherListStore.weatherList}
                               remove={Home.removeWeather} />
             </div>
-        )
+        );
     }
 }

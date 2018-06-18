@@ -25,6 +25,6 @@ export default class Alert extends React.Component {
                     <button onClick={Alert.closeAlert}>OK</button>
                 </div>
             </div>
-        </div>
+        </div>;
     }
 }

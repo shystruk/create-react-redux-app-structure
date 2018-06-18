@@ -11,16 +11,14 @@ export default class Resize_SubPub_Action extends React.Component {
         this.state = Resize_SubPub_Action_Interface;
 
         this.resizeSubKey = 0;
-
-        this.updateSizes = this.updateSizes.bind(this);
     }
 
-    updateSizes(data = {}) {
+    updateSizes = (data = {}) => {
         this.setState({
             width: data.width || window.innerWidth,
             height: data.height || window.innerHeight
         });
-    }
+    };
 
     componentDidMount() {
         this.updateSizes();
@@ -38,6 +36,6 @@ export default class Resize_SubPub_Action extends React.Component {
                 <div><FormattedHTMLMessage id="dumb.display_height" values={{height: this.state.height}} /></div>
                 <br />
             </div>
-        )
+        );
     }
 }

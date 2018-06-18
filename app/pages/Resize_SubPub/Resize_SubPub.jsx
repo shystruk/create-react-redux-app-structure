@@ -21,6 +21,6 @@ export default class Resize_SubPub extends React.Component {
 
                 <Resize_SubPub_Action />
             </div>
-        )
+        );
     }
 }

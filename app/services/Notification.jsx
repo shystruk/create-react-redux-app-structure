@@ -23,6 +23,6 @@ export default class Notification extends React.Component {
         return <div style={styles.parent}
                     className={"bs-notification-service animated " + (message ? "fadeInDown" : "fadeOutUp")}>
             <div style={styles.message} className="bs-notification-service-ms">{message}</div>
-        </div>
+        </div>;
     }
 }

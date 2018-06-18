@@ -16,10 +16,6 @@ export default class Open_Weather extends React.Component {
         super();
 
         this.state = Open_Weather_Interface;
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleKeyUp = this.handleKeyUp.bind(this);
-        this.handleSearch = this.handleSearch.bind(this);
     }
 
     componentDidMount() {
@@ -45,23 +41,23 @@ export default class Open_Weather extends React.Component {
     /**
      * @param {Object} event
      */
-    handleKeyUp(event) {
+    handleKeyUp = (event) => {
         if (event.keyCode === KEY_CODES.ENTER) {
             this.handleSearch();
         }
-    }
+    };
 
     /**
      * @param {Object} event
      */
-    handleChange(event) {
+    handleChange = (event) => {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
 
         this.setState(() => ({[target.name]: value}));
-    }
+    };
 
-    async handleSearch() {
+    handleSearch = async () => {
         let weather = {};
 
         this.setState(() => ({preload: true}));
@@ -79,7 +75,7 @@ export default class Open_Weather extends React.Component {
         } finally {
             this.setState(() => ({preload: false}));
         }
-    }
+    };
 
     /**
      * @param {Object} weather
@@ -113,6 +109,6 @@ export default class Open_Weather extends React.Component {
                      src="./images/loader.gif"/>
 
             </div>
-        )
+        );
     }
 }

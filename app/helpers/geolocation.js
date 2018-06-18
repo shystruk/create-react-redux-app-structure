@@ -7,7 +7,7 @@ import _includes from 'lodash/includes';
 export const getLocation = () => {
     return new Promise((resolve, reject) => {
         if (navigator.geolocation) {
-            return void navigator.geolocation.getCurrentPosition((position) => {
+            return void navigator.geolocation.getCurrentPosition(position => {
                 resolve({
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude
@@ -35,7 +35,7 @@ export const getLocation = () => {
  * @return {String}
  */
 export const getCityNameFromGeocode = (location) => {
-    const address = _find(location.results[0].address_components, (address) => {
+    const address = _find(location.results[0].address_components, address => {
         return _includes(address.types, 'locality');
     });
 

@@ -25,6 +25,6 @@ export default class Page_Visibility_API extends React.Component {
 
                 <Show_Page_Visibility_API alert={alertStore} />
             </div>
-        )
+        );
     }
 }
