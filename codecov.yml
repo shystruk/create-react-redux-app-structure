@@ -9,10 +9,7 @@ coverage:
 
   status:
     project: yes
-    patch:
-      default:
-        enabled: no
-        if_not_found: success
+    patch: off
     changes: no
 
 parsers:
