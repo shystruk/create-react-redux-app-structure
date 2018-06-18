@@ -9,11 +9,7 @@ coverage:
 
   status:
     project: yes
-    patch:
-      if_no_uploads: success
-      if_not_found: success
-      if_ci_failed: success
-    changes: no
+    patch: off
 
 parsers:
   gcov:
