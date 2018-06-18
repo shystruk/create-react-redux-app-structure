@@ -9,12 +9,6 @@ coverage:
 
   status:
     project: yes
-    patch: off
-
-parsers:
-  gcov:
-    branch_detection:
-      conditional: yes
-      loop: yes
-      method: no
-      macro: no
+    patch:
+      default: off
+    changes: false
