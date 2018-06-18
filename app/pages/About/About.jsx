@@ -24,6 +24,6 @@ export default class About extends React.Component {
 
                 <Weather_View weather={weatherStore} weatherList={weatherListStore.weatherList} />
             </div>
-        )
+        );
     }
 }

@@ -5,7 +5,7 @@ import { PUB_SUB } from './../../constants/events.constant';
 import SetInterval from 'set-interval';
 import store from './../../store';
 import { showAlert } from './../../actions/alert';
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl';
 
 export default class Show_Page_Visibility_API extends React.Component {
     constructor() {
@@ -13,30 +13,27 @@ export default class Show_Page_Visibility_API extends React.Component {
 
         this.state = Show_Page_Visibility_API_Interface;
         this.visibilityChangeSubKey = 0;
-
-        this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
-        this.simulateHTTPRequest = this.simulateHTTPRequest.bind(this);
     }
 
-    simulateHTTPRequest() {
+    simulateHTTPRequest = () => {
         setTimeout(() => {
             if (!this.unmount) {
                 this.setState({amountOfNewUsers: ++this.state.amountOfNewUsers});
             }
         }, 500);
-    }
+    };
 
     /**
      * @param {Object} data
      */
-    handleVisibilityChange(data) {
+    handleVisibilityChange = (data) => {
         if (data.action === 'continue') {
             SetInterval.start(this.simulateHTTPRequest, 1000, 'page_visibility');
             store.dispatch(showAlert('Seems like the page was not visible. Do not worry, we keep working :)'));
         } else {
             SetInterval.clear('page_visibility');
         }
-    }
+    };
 
     componentDidMount() {
         SetInterval.start(this.simulateHTTPRequest, 1000, 'page_visibility');
@@ -57,6 +54,6 @@ export default class Show_Page_Visibility_API extends React.Component {
                     <FormattedMessage id="dumb.amount_of_new_users" values={{amountOfUsers: this.state.amountOfNewUsers}} />
                 </h2>
             </div>
-        )
+        );
     }
 }

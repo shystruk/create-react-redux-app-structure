@@ -25,7 +25,7 @@ function mapStateToProps(store, props) {
         weather: store.weather,
         weatherCities: store.weatherCities,
         notification: store.notification
-    }
+    };
 }
 
 class App extends React.Component {
@@ -66,7 +66,7 @@ class App extends React.Component {
 
                 <Notification notification={notificationStore} />
             </div>
-        )
+        );
     }
 }
 
