@@ -31,6 +31,7 @@ gulp.task('html-build', function() {
             'css': `${config[TARGET].assetHost}/build/styles.min.css`,
             'js': [
                 `${config[TARGET].assetHost}/build/vendor.js`,
+                `${config[TARGET].assetHost}/build/web_components_vendor.js`,
                 `${config[TARGET].assetHost}/build/libs.js`,
                 `${config[TARGET].assetHost}/build/index.js`
             ]
@@ -52,6 +53,17 @@ gulp.task('jquery', function() {
     .pipe(gulp.dest(config.PATHS.build));
 });
 
+// Web Components vendor
+gulp.task('web_components_vendor', function() {
+    return gulp.src([
+        'node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js'
+    ])
+    .pipe(concat('web_components_vendor.js'))
+    .pipe(uglify())
+    .on('error', err => { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+    .pipe(gulp.dest(config.PATHS.build));
+});
+
 // CSS
 gulp.task('css', function () {
     return gulp.src(config.PATHS.sass_index)
@@ -70,6 +82,6 @@ gulp.task('watch', function() {
     gulp.watch(config.PATHS.external, ['jquery']);
 });
 
-gulp.task('default', ['html-build', 'watch', 'css', 'jquery']);
-gulp.task('prod', ['html-build', 'css', 'jquery']);
+gulp.task('default', ['html-build', 'watch', 'css', 'jquery', 'web_components_vendor']);
+gulp.task('prod', ['html-build', 'css', 'jquery', 'web_components_vendor']);
 gulp.task('clean-build', ['clean']);
