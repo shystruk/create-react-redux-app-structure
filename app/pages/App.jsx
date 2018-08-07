@@ -3,6 +3,8 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import store from './../store';
+import 'notification-service-js';
+import CustomEvent from 'custom-event-js';
 
 import noInternet from 'no-internet';
 import isEmpty from 'lodash/isEmpty';
@@ -41,6 +43,11 @@ class App extends React.Component {
                 store.dispatch(removeNotification());
             }
         }});
+
+        CustomEvent.DISPATCH('WEB_COMP_SHOW_NOTIFICATION', {
+            type: 'success',
+            message: 'Welcome! I\'m notification-service based on Custom Element'
+        });
     }
 
     render() {
@@ -65,6 +72,7 @@ class App extends React.Component {
                 <Alert alert={alertStore} />
 
                 <Notification notification={notificationStore} />
+                <notification-service></notification-service>
             </div>
         );
     }

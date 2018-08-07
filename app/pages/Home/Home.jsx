@@ -1,9 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import store from './../../store';
-
 import { removeWeatherFromList } from './../../actions/weather_list';
-
 import Open_Weather_Search from './../../components/Open_Weather_Search/Open_Weather_Search';
 import Weather_View from './../../components/dumb/Weather_View';
 

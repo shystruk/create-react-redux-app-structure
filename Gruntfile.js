@@ -20,6 +20,12 @@ module.exports = function(grunt) {
                 file: './build/vendor.js',
                 cleanup: true
             },
+            web_components_vendorJs: {
+                replace: ['./index.html'],
+                replacement: 'web_components_vendor.js',
+                file: './build/web_components_vendor.js',
+                cleanup: true
+            },
             indexJs: {
                 replace: ['./index.html'],
                 replacement: 'index.js',
