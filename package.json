@@ -1,6 +1,6 @@
 {
   "name": "create-react-redux-app-structure",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "main": "index.js",
   "repository": "https://github.com/shystruk/create-react-redux-app-structure.git",
   "description": "create react redux app structure with build configurations",
