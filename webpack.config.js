@@ -8,7 +8,7 @@ const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
     app: path.join(__dirname, 'app'),
     build: path.join(__dirname, 'build'),
-    modules: path.join(__dirname, 'node_modules')
+    vendor: path.join(__dirname, 'app/vendor')
 };
 
 const common = {
@@ -26,7 +26,7 @@ const common = {
             'redux-logger'
         ],
         custom_elements_vendor: [
-            `${PATHS.modules}/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js`
+            `${PATHS.vendor}/custom-elements-es5-adapter.js`
         ]
     },
     resolve: {
