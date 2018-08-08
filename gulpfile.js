@@ -56,7 +56,9 @@ gulp.task('jquery', function() {
 // Web Components vendor
 gulp.task('web_components_vendor', function() {
     return gulp.src([
-        'node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js'
+        `${config.PATHS.vendor}/core-js.js`,
+        'node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js',
+        `${config.PATHS.build}/custom_elements_vendor.js`
     ])
     .pipe(concat('web_components_vendor.js'))
     .pipe(uglify())

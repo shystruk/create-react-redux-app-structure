@@ -3,10 +3,18 @@ import { FormattedMessage } from 'react-intl';
 
 import Open_Weather_Search from './../../components/Open_Weather_Search/Open_Weather_Search';
 import Weather_View from './../../components/dumb/Weather_View';
+import CustomEvent from "custom-event-js";
 
 export default class About extends React.Component {
     constructor() {
         super();
+    }
+
+    componentDidMount() {
+        CustomEvent.DISPATCH('WEB_COMP_SHOW_NOTIFICATION', {
+            type: 'warning',
+            message: 'Hello again! ;) \n I\'m notification-service based on Custom Element'
+        });
     }
 
     render() {

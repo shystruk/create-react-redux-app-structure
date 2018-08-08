@@ -35,7 +35,7 @@ export const getLocation = () => {
  * @return {String}
  */
 export const getCityNameFromGeocode = (location) => {
-    const address = _find(location.results[0].address_components, (address) => {
+    const address = _find((location.results[0] && location.results[0].address_components) || [], (address) => {
         return _includes(address.types, 'locality');
     });
 
