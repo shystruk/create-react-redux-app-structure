@@ -72,7 +72,7 @@ class App extends React.Component {
                 <Alert alert={alertStore} />
 
                 <Notification notification={notificationStore} />
-                <notification-service style-src="build/styles2.css"></notification-service>
+                <notification-service></notification-service>
             </div>
         );
     }
