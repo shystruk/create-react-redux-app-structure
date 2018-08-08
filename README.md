@@ -5,17 +5,18 @@
 Create React + Redux app structure with build configurations.
 
 ## What can I find here? ##
-- Express, Cors
-- React + Redux, ES6, async/await
+- [Express](https://expressjs.com/), Cors
+- [React](https://reactjs.org/) + [Redux](https://redux.js.org/), ES6, async/await
+- [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) (Custom Elements) integration
 - React Router
 - Internationalization
 - SASS
 - PostCSS (autoprefixer), so you do not need -webkit, -moz or other prefixes
 - Build script configuration **Development, Staging, Production** with CDN, [cache-busting](https://www.keycdn.com/support/what-is-cache-busting/) support
 - Build script to bundle JS, CSS, with sourcemaps
-- Unit tests Jest, Enzyme
-- E2E Cypress tests
-- ESLint
+- Unit tests [Jest](https://jestjs.io/), [Enzyme](http://airbnb.io/enzyme/)
+- E2E [Cypress](https://www.cypress.io/) tests
+- [ESLint](https://eslint.org/)
 - Ghooks (pre-commit with unit tests and eslint validation)
 - Code Coverage (https://codecov.io)
 - Travis CI runs Unit and E2E tests and report to codecov
@@ -40,8 +41,7 @@ http://localhost:8080/ will be opened automatically.
 When you are ready to deploy to staging/production please see [Build Scripts](#build-scripts) section.
 
 ## Getting Started ##
-**You will need to have Node >= 6 on your local development machine.**
-> While creating an app you see *new TypeError('"file" argument must be a non-empty string')* do not worry, your app is created and ready to go 👍. Check mode details [here](https://github.com/shystruk/create-react-redux-app-structure/issues/19).
+**You will need to have Node >= 6 on your local development machine and [Yarn](https://yarnpkg.com/en/docs/install#mac-stable) installed.**
 
 Install it once globally:
 
