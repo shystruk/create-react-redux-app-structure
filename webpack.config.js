@@ -7,7 +7,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
     app: path.join(__dirname, 'app'),
-    build: path.join(__dirname, 'build')
+    build: path.join(__dirname, 'build'),
+    modules: path.join(__dirname, 'node_modules')
 };
 
 const common = {
@@ -23,6 +24,9 @@ const common = {
             'redux-promise',
             'redux-thunk',
             'redux-logger'
+        ],
+        custom_elements_vendor: [
+            `${PATHS.modules}/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js`
         ]
     },
     resolve: {
