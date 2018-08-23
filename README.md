@@ -125,6 +125,7 @@ Kill all node processes:
 - [clearIntervals() when user has a nap](https://codeburst.io/clearintervals-when-user-has-a-nap-3bf8010c986b)
 - [Do you still register window event listeners in each component?](https://medium.com/@shystruk/do-you-still-register-window-event-listeners-in-each-component-react-in-example-31a4b1f6f1c8)
 - [v4 Create React + Redux app structure with build configurations. What’s new?](https://medium.com/@shystruk/v4-create-react-redux-app-structure-with-build-configurations-whats-new-523bdec328c6)
+- [Integrate Custom Elements into React app](https://medium.com/@shystruk/integrate-custom-elements-into-react-app-ef38eba12905)
 
 ## Contributing ##
 
