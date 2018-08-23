@@ -68,6 +68,7 @@
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.0.4",
+    "bind-dom": "0.0.4",
     "chalk": "^1.1.3",
     "commander": "^2.12.2",
     "cors": "^2.8.4",
@@ -80,7 +81,7 @@
     "lodash": "^4.17.4",
     "no-internet": "^1.3.0",
     "node-fetch": "^1.7.3",
-    "notification-service-js": "^0.4.0",
+    "notification-service-js": "^0.4.1",
     "publish-subscribe-js": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

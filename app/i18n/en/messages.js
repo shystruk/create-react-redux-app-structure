@@ -4,6 +4,7 @@ export default {
     'pages.about': 'About',
     'pages.resize_subpub': 'Resize SubPub',
     'pages.page_visibility_api': 'Page Visibility API',
+    'pages.components_communication': 'Components Communication',
 
     // COMPONENTS
     'dumb.amount_of_new_users': 'Amount of new users: {amountOfUsers}',
