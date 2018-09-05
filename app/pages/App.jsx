@@ -75,7 +75,7 @@ class App extends React.Component {
                 <Alert alert={alertStore} />
 
                 <Notification notification={notificationStore} />
-                <notification-service></notification-service>
+                <notification-service cross-img-src="../images/cross.svg"></notification-service>
             </div>
         );
     }

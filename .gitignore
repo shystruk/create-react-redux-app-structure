@@ -14,5 +14,6 @@ app/tests/__tests__/coverage/*
 .DS_Store
 
 build/*
+package-lock.json
 
 /index.html

@@ -81,7 +81,7 @@
     "lodash": "^4.17.4",
     "no-internet": "^1.3.0",
     "node-fetch": "^1.7.3",
-    "notification-service-js": "^0.4.1",
+    "notification-service-js": "^0.5.3",
     "publish-subscribe-js": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
