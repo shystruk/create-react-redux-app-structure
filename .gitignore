@@ -15,5 +15,6 @@ app/tests/__tests__/coverage/*
 
 build/*
 package-lock.json
+yarn.lock
 
 /index.html
