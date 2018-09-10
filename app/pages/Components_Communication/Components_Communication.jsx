@@ -1,7 +1,7 @@
 import React from 'react';
 import jQuery from 'jquery';
 import { FormattedMessage } from 'react-intl';
-import { oneWay, twoWay, oneTime, disconnectBindDom, disconnectBindDomAll } from 'bind-dom';
+import { oneWay, twoWay, oneTime, disconnect, disconnectAll } from 'bind-dom';
 
 export default class Components_Communication extends React.Component {
     componentDidMount() {
@@ -15,8 +15,8 @@ export default class Components_Communication extends React.Component {
     }
 
     componentWillUnmount() {
-        disconnectBindDom('inputObserver');
-        disconnectBindDomAll();
+        disconnect('inputObserver');
+        disconnectAll();
     }
 
     onChange = (event) => {
