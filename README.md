@@ -50,7 +50,7 @@ Install it once globally:
 `npm i -g create-react-redux-app-structure`
 
 #### yarn
-`yarn add -g create-react-redux-app-structure`
+`yarn add global create-react-redux-app-structure`
 
 > Patience, please. It takes time, most of it is spent installing npm packages.
 
