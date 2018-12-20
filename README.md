@@ -30,7 +30,7 @@ If something doesn’t work, please file an [issue](https://github.com/shystruk/
 `npm i -g create-react-redux-app-structure`
 
 #### yarn
-`yarn add -g create-react-redux-app-structure`
+`yarn add global create-react-redux-app-structure`
 
 ```
 create-react-redux-app-structure my-app
