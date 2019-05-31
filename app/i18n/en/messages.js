@@ -5,6 +5,7 @@ export default {
     'pages.resize_subpub': 'Resize SubPub',
     'pages.page_visibility_api': 'Page Visibility API',
     'pages.components_communication': 'Components Communication',
+    'pages.csv_check': 'CSV Validator',
 
     // COMPONENTS
     'dumb.amount_of_new_users': 'Amount of new users: {amountOfUsers}',

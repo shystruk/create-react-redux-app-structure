@@ -21,6 +21,7 @@ import About from './About/About';
 import Resize_SubPub from './Resize_SubPub/Resize_SubPub';
 import Page_Visibility_API from './Page_Visibility_API/Page_Visibility_API';
 import Components_Communication from './Components_Communication/Components_Communication';
+import CSV_Check from './CSV_Check/CSV_Check';
 
 function mapStateToProps(store, props) {
     return {
@@ -64,6 +65,7 @@ class App extends React.Component {
                     <li><Link to="/resize"><FormattedMessage id="pages.resize_subpub"/></Link></li>
                     <li><Link to="/visibility"><FormattedMessage id="pages.page_visibility_api"/></Link></li>
                     <li><Link to="/communication"><FormattedMessage id="pages.components_communication"/></Link></li>
+                    <li><Link to="/csv-validator"><FormattedMessage id="pages.csv_check"/></Link></li>
                 </ul>
 
                 <Route exact path="/" render={() => <Home {...this.props} /> } />
@@ -71,6 +73,7 @@ class App extends React.Component {
                 <Route path="/visibility" render={() => <Page_Visibility_API {...this.props} /> } />
                 <Route path="/resize" component={Resize_SubPub} />
                 <Route path="/communication" component={Components_Communication} />
+                <Route path="/csv-validator" component={CSV_Check} />
 
                 <Alert alert={alertStore} />
 
