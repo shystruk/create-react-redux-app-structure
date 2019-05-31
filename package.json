@@ -1,6 +1,6 @@
 {
   "name": "create-react-redux-app-structure",
-  "version": "4.5.1",
+  "version": "4.6.0",
   "main": "index.js",
   "repository": "https://github.com/shystruk/create-react-redux-app-structure.git",
   "description": "create react redux app structure with build configurations",
@@ -73,6 +73,7 @@
     "commander": "^2.12.2",
     "cors": "^2.8.4",
     "cross-spawn": "^5.1.0",
+    "csv-file-validator": "^1.5.0",
     "custom-event-js": "^0.2.0",
     "express": "^4.16.2",
     "famulus": "^1.2.3",
