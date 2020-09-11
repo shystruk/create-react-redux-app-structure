@@ -81,7 +81,7 @@
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "no-internet": "^1.3.0",
-    "node-fetch": "^1.7.3",
+    "node-fetch": "^2.6.1",
     "notification-service-js": "^0.5.4",
     "publish-subscribe-js": "^1.0.0",
     "react": "^16.6.3",
