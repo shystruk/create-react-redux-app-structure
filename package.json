@@ -111,7 +111,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "codecov.io": "^0.1.6",
     "concurrently": "^3.5.0",
-    "cypress": "^1.0.1",
+    "cypress": "^12.7.0",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
     "eslint": "^4.12.0",
